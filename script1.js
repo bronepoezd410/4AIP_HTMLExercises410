@@ -1,1 +1,2 @@
-alert('1');
+"use strict";
+alert('text1!');
