@@ -1,9 +1,18 @@
 "use strict";
 
-let num = parseInt('5px');
-let num1 = parseInt('6px');
-alert(num +num1);
+let num1 = 10;
+let num2 = 20;
 
-let Anum = parseFloat('5.5px');
-let Anum1 = parseFloat('6.25px');
-alert(Anum + Anum1 + 'px');
+alert(String(num1) + String(num2));
+
+
+let num = 23423423;
+let str = String(num);
+alert(str.length); 
+
+let number = 23423423;
+let str2 = String(num);
+
+let number2 = 23423423;
+let str3 = String(num);
+alert(str2.length + str3.length); 
