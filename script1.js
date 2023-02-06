@@ -1,10 +1,17 @@
 "use strict";
+let b;
+alert(b);
 
+let c = null;
+alert(c);
 
-let str1 = 'xxx';
-let str2 = 'yyy';
-let txt  = `aaa ${str1} bbb ${str2} ccc`;
+let f = true;
+alert(f);
 
-let str = `a
-b
-c`;
+let e = false;
+alert(e);
+
+alert('abc' * 'wer');
+
+alert( 10 / 0); // выведет Infinity
+alert(-10 / 0);
