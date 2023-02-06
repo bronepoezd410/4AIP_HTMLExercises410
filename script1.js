@@ -1,17 +1,9 @@
 "use strict";
-let b;
-alert(b);
+let num1 = 123;
+let num2 = 456;
+let num3 = 789;
+console.log(num1, num2, num3);
 
-let c = null;
-alert(c);
-
-let f = true;
-alert(f);
-
-let e = false;
-alert(e);
-
-alert('abc' * 'wer');
-
-alert( 10 / 0); // выведет Infinity
-alert(-10 / 0);
+console.log(123);
+console.log('123');
+console.log(false);
