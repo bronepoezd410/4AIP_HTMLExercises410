@@ -1,22 +1,9 @@
 "use strict";
 
-let a = Number('10');
-let b = Number('20');
-alert(a + b);
+let num = parseInt('5px');
+let num1 = parseInt('6px');
+alert(num +num1);
 
-// alert( Number('2') + Number('3') );
-// 5
-
-// alert( 2 + Number('3') );
-// 5
-
-// alert( '2' + Number('3') );
-// 23
-
-let aA = Number('2');
-let bA = Number('3');
-alert(aA + bA);
-
-let aB = '2';
-let bB = '3';
-alert(+aB + +bB);
+let Anum = parseFloat('5.5px');
+let Anum1 = parseFloat('6.25px');
+alert(Anum + Anum1 + 'px');
