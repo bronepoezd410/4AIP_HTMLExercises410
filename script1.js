@@ -1,57 +1,22 @@
 "use strict";
 
-// let a = '5' + '2';
-// alert(a)
-//55
+let a = Number('10');
+let b = Number('20');
+alert(a + b);
 
-// let a = '5' + 2;
-// alert(a);
-// 52
+// alert( Number('2') + Number('3') );
+// 5
 
-// let a = 5 + '2';
-// alert(a);
-// 52
+// alert( 2 + Number('3') );
+// 5
 
-// let a = 5 + 2;
-// alert(a);
-// 7
+// alert( '2' + Number('3') );
+// 23
 
-// let a = '5' * '2';
-// alert(a);
-// 10
+let aA = Number('2');
+let bA = Number('3');
+alert(aA + bA);
 
-// let a = '5' - '2';
-// alert(a);
-// 3
-
-// let a = '5' / '2';
-// alert(a);
-// 2.5
-
-// let a = '5' % '2';
-// alert(a);
-// 1
-
-// let a = '5s' * '2';
-// alert(a);
-// NaN
-
-// let a = '5s' + '2';
-// alert(a);
-// 5s2
-
-// let a = (-'5') + (-'2');
-// alert(a);
-// -7
-
-// let a = '5' * 1 + '2' * 1;
-// alert(a);
-// 7
-
-// let a = '5' * '1' + '2' * '1';
-// alert(a);
-// 7
-
-// let a = '' + 3 + 1;
-// alert(a);
-// 31
+let aB = '2';
+let bB = '3';
+alert(+aB + +bB);
