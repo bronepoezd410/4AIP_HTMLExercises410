@@ -1,15 +1,84 @@
 "use strict";
 
-alert(true + 3);
+// let test = Boolean(3);
+// alert(test);
+// true
 
-alert(true + true);
+// let test = Boolean(0);
+// alert(test);
+// false
 
-alert(true - true);
+// let test = Boolean(-1);
+// alert(test);
+// true
 
-alert(true + false);
+// let test = Boolean(-0);
+// alert(test);
+// false
 
-alert('1' + true);
+// let test = Boolean(+0);
+// alert(test);
+// false
 
-alert( String(true) + 1 );
+// let test = Boolean('abc');
+// alert(test);
+// true
 
-alert( String(true) + Number(true) );
+// let test = Boolean('');
+// alert(test);
+// false
+
+// let test = Boolean('0');
+// alert(test);
+// true
+
+
+// let test = Boolean(true);
+// alert(test);
+// true
+
+// let test = Boolean(false);
+// alert(test);
+// false
+
+// let test = Boolean('true');
+// alert(test);
+// true
+
+// let test = Boolean('false');
+// alert(test);
+// false
+
+// let test = Boolean(null);
+// alert(test);
+// false
+
+// 
+
+
+// let test = Boolean(undefined);
+// alert(test);
+// false
+
+// let test = Boolean('undefined');
+// alert(test);
+// true
+
+// let test = Boolean(NaN);
+// alert(test);
+// false
+
+// let test = Boolean('NaN');
+// alert(test);
+// true
+
+// let test = Boolean(3 * 'abc');
+// alert(test);
+// false
+
+// let test = Boolean(Infinity);
+// alert(test);
+
+// let test = Boolean(1 / 0);
+// alert(test);
+// true
