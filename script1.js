@@ -1,16 +1,23 @@
 "use strict";
 
 
-let x = '12345';
-alert(Number(x[0])+Number(x[1])+Number(x[2])+Number(x[3])+Number(x[4]));
+// let num = 1;
+// num = num + 1;
+// num = num + 1;
 
-let r = String(12345);
-alert(Number(r[0])+Number(r[1])+Number(r[2])+Number(r[3])+Number(r[4]));
+// alert(num);
+// 3
 
-let f = String(12345);
-alert(Number(f[0])*Number(f[1])*Number(f[2])*Number(f[3])*Number(f[4]));
+// let num = 1;
+// num = num + 2;
+// num = num + 3;
 
-let g = String(12345);
-alert((g[4])+(g[3])+(g[2])+(g[1])+(g[0]));
+// alert(num);
+// 6
 
-
+let num = 47;
+num += 7;
+num -= 18;
+num *= 10;
+num /= 15;
+alert(num);
