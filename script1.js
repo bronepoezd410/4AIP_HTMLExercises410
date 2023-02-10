@@ -1,24 +1,8 @@
 "use strict";
 
-let obj1 = {
-	'1a': 1,
-	'b2': 2,
-	'с-с': 3,
-	'd 4': 4,
-	'e5': 5
-};
-//1, 3, 4//
+let obj = {x: 1, y: 2, z: 3};
 
-let obj = {
-	'1a': 1,
-	'b2': 2,
-	'с-с': 3,
-	'd 4': 4,
-	'e5': 5
-};
-
-console.log(obj['1a']);
-console.log(obj.b2);
-console.log(obj['c-c']);
-console.log(obj['d 4']);
-console.log(obj.e5);
+obj.x **= 2;
+obj.y **= 2;
+obj.z **= 2;
+console.log(obj)
