@@ -1,6 +1,7 @@
 "use strict";
 
 let obj = {x: 1, y: 2, z: 3};
-delete obj.x;
+console.log( typeof obj['x'] );
+//number
 
-console.log('x' in obj); //false
+//все остальные - тип object
