@@ -1,12 +1,12 @@
 "use strict";
 
-let arr = [];
+let arr = ['a', 'b', 'c'];
 
-arr.push(1);
-arr.push(2);
-arr.push(3);
+let key = 2;
 
+console.log(arr[key]);
 
-let arr1 = [1, 2, 3];
-arr1.push(4);
-arr1.push(5);
+let arr1 = [1, 2, 3, 4, 5];
+let key1 = 1;
+let key2 = 2;
+alert(arr1[key1] + arr1[key2])
