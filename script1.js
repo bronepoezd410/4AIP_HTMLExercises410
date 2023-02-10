@@ -1,9 +1,11 @@
 "use strict";
 
-let Myarr = [1, 2, 3];
-alert(Myarr);
-console.log(Myarr);
+let arr = [1,2,3];
+alert(arr[0]);
+alert(arr[1]);
+alert(arr[2]);
+alert(arr[0]+arr[1]+arr[2]);
 
-let Yourarr = ['a', 'b', 'c'];
-alert(Yourarr);
-console.log(MyaYourarrrr);
+
+let arr1 = [a,b,c,d];
+alert(arr1[0] + '+' +arr1[1]+'+'+arr1[2]+ '+' + arr1[3]);
