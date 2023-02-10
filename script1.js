@@ -2,11 +2,6 @@
 
 let obj = {x: 1, y: 2, z: 3};
 
-let keys = Object.keys(obj);
+let key = 'y';
 
-console.log(keys);
-
-console.log(Object.keys(obj).length);
-
-console.log(keys.length);
-
+console.log(obj[key]);
