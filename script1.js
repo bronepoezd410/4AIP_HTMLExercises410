@@ -1,7 +1,7 @@
 "use strict";
 
-let obj = {30: 'cсс', 10: 'aAA', 20: 'bbb'};
+let obj = {x: 1, y: 2, z: 3};
 
-console.log(obj[10]);
-console.log(obj[20]);
-console.log(obj[30]);
+let keys = Object.keys(obj);
+
+console.log(keys);
