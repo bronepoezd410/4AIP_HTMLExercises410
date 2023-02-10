@@ -1,6 +1,25 @@
 "use strict";
 
-// console.log( Array.isArray([1, 2, 3]) );
-// true
-// console.log( Array.isArray({x: 1, y: 2, z: 3}) );
-// false
+// let test = {x: 1, y: 2, z: 3};
+// console.log(test);
+// //object
+// let test = {x: 1, y: 2, z: 3};
+// console.log(test.x);
+// //primitive
+// let test = [1, 2, 3];
+// console.log(test);
+// //object
+// let test = [1, 2, 3];
+// console.log(test[1]);
+// //primitive
+// let test1 = [1, 2, 3];
+// let test2 = 1;
+// console.log(test1);
+// //object
+// let test1 = [1, 2, 3];
+// let test2 = 1;
+// console.log(test1[test2]);
+// //primitive
+
+//Примитивные типы данных - 7: int, string, boolean, null, undefined, остальные не помню, там слишком странные
+//
