@@ -1,9 +1,8 @@
 "use strict";
 
-let user = {
-    name1: 'Матвей',
-    surname: 'Облепиха', 
-    patronymic: 'Сергеевич', 
+let date = {
+    year: '2023',
+    month: 'Февраль', 
+    day: '10', 
 };
-console.log(user);
-alert(user['name1'] + ' ' + user['surname']+ ' ' + user['patronymic']);
+console.log(date.year, date.month, date.day);
