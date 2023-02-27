@@ -1,87 +1,76 @@
 "use strict";
-// let test = 3;
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// +++
-// let test = 'abc';
+   let test = true;
+   let test = true;
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// +++
-// let test = '';
+   if (test && test) {
+      console.log('+++');
+   } else {
+      console.log('---');
+   }
++++
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// ---
-// let test = 3 * 'abc';
+   let test = true;
+   let test = true;
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// ---
+   if (test && (!test)) {
+      console.log('+++');
+   } else {
+      console.log('---');
+   }
+---
 
-// let test = null;
+   let test = true;
+   let test = true;
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// ---
+   if ((!test) && (!test)) {
+      console.log('+++');
+   } else {
+      console.log('---'); 
+    
+   }
 
-// let test = false;
+   ---
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// ---
+   let test = true;
+   let test = true;
 
-// let test;
+   if ((!test) && test) {
+      console.log('+++');
+   } else {
+      console.log('---');
+   }
+---
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// ---
+   let test = true;
+   let test0 = true;
+   let test1 = true;
 
-// let test = 0;
+   if (test && test0 && test1) {
+      console.log('+++');
+   } else {
+      console.log('---');
+   }
++++
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// ---
+   let test2 = true;
+   let test = true;
+   let test = true;
 
-// let test = '0';
+   if (test2 || test && test) {
+      console.log('+++');
+   } else {
+      console.log('---');
+   }
+   +++
 
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// +++
+   let test = true;
+   let test = true;
+   let test = true;
 
-// let test = -1;
-
-// if (test) {
-// 	console.log('+++');
-// } else {
-// 	console.log('---');
-// }
-// +++
+   if (test || (!test) && (!test)) {
+      console.log('+++');
+   } else {
+      console.log('---'); 
+   }
+   +++
