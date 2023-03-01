@@ -1,25 +1,18 @@
 "use strict";
 
-// let string = 'dsdqwdqwd';
+//    let num = 1231;
+//    let str = String(num)
 
-// if (string[0] == 'D' || string[0] == 'd') {
-//    console.log('da');
-// } else {
-//    console.log('net');
-// }
+//    if (str[str.length - 1] != 0) {
+//       console.log('da')
+//    } else {
+//       console.log('net')
+//    }
 
-// let string = '2dfasdfa43afe3';
+   let num = 4;
 
-// if (string[string.length - 1] == '3' || string[string.length - 1] == '3') {
-//    console.log('da');
-// } else {
-//    console.log('net');
-// }
-
-// let string = 'tfsdfaw4fa4';
-
-// if (string[0] == 't' || string[0] == 'f') {
-//    console.log('da');
-// } else {
-//    console.log('net');
-// }
+   if (num % 2 == 0) {
+      console.log('da')
+   } else {
+      console.log('net')
+   }
