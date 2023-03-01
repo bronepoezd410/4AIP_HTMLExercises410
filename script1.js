@@ -1,113 +1,50 @@
 "use strict";
 
-//    let num = 1;
-//    let num = 2;
 
-//    if (num + num === 3) {
-//       console.log('+++');
+//    let month = 3;
+
+//    if (month >= 3 && month <= 5){
+// 	console.log('Весна')
+//    }
+//    else if (month >= 6 && month <= 8){
+// 	console.log('Лето')
+//    }
+//    else if (month >= 9 && month <= 11){
+// 	console.log('Осень')
+//    }
+//    else
+//    console.log('Зима')
+
+
+
+//    let str = 'abcde';
+
+//    if (str[0] == 'a') {
+//       console.log('da')
 //    } else {
-//       console.log('---');
+//       console.log('net')
 //    }
 
-//    let num = '1';
-//    let num = '2';
+//    const num = 12345;
 
-//    if (Number(num) + Number(num) === 3) {
-//       console.log('+++');
+//    if (String(num)[0] == '1' || String(num)[0] == '2' || String(num)[0] == '3') {
+//       console.log('da')
 //    } else {
-//       console.log('---');
-//    }
-//    let num = '1';
-//    let num = '2';
-
-//    if (Number(num) + Number(num) === 3) {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
+//       console.log('net')
 //    }
 
-//    let num = 123;
-//    let str = String(num)
+//    const num1 = '123';
+//    let result = Number(num1[0]) + Number(num1[1]) + Number(num1[2]);
 
-//    if (str[0] == '1') {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
+//    console.log(result)
 
-//    let num = 123;
+   let num15 = '123033';
 
-//    if (String(num)[0] === '1') {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-//    let num = 123;
-
-//    if (String(num)[0] === '1') {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-//    let num = 123;
-//    let first = String(num);
-
-//    if (first[0] === '1') {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-//    let num = 12;
-
-//    if (String(num).length === 2) {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-//    let num = 12;
-//    let str11 = String(num);
-
-//    if (str11.length === 2) {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-//    let num = 12;
-
-//    if (String(num).length === 2) {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-//    let num = 12;
-
-//    if (String(num).length === 2) {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-//    let num = 12;
-
-//    if (String(num).length === 2) {
-//       console.log('+++');
-//    } else {
-//       console.log('---');
-//    }
-
-   let num = '432342';
-
-   let sum1 = Number(num[0]) + Number(num[1]) + Number(num[2]);
-   let sum2 = Number(num[3]) + Number(num[4]) + Number(num[5]);
+   let sum1 = Number(num15[0]) + Number(num15[1]) + Number(num15[2]);
+   let sum2 = Number(num15[3]) + Number(num15[4]) + Number(num15[5]);
 
    if (sum1 == sum2) {
-      console.log('summaries equal');
+      console.log('суммы равны');
    } else {
-      console.log('summaries not equal');
+      console.log('суммы не равны');
    }
