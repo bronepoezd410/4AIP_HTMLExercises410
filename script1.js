@@ -1,9 +1,11 @@
 "use strict";
 
-let ok = confirm('Вы достигли 18 лет?');
+let age = 17;
+let adult
 
-if (ok) {
-   alert('да');
+if (age >= 18) {
+   adult = true;
 } else {
-   alert('нет');
+   adult = false;
 }
+console.log(adult);
