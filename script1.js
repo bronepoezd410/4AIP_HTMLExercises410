@@ -1,57 +1,16 @@
 "use strict";
 
 
-//    let age = 17;
-//    let adult;
+let min = 21;
 
-//    if (age >= 18) {
-//       adult = true;
-//    } else {
-//       adult = false;
-//    }
+if (min >= 0 && min <= 20) {
+   console.log('1');
+}
 
-//    console.log(adult);
+if (min >= 21 && min <= 41) {
+   console.log('2');
+}
 
-
-//    let age = 17;
-//    let adult;
-
-//    if (age >= 18) {
-//       adult = true;
-//    } else {
-//       adult = false;
-//    }
-
-//    console.log(adult);
-
-
-//    let age = 17;
-//    let res;
-
-//    if (age >= 18) {
-//       if (age <= 23) {
-//          res = 'от 18 до 23';
-//       } else {
-//          res = 'больше 23';
-//       }
-//    } else {
-//       res = 'меньше 18';
-//    }
-
-//    console.log(res);
-
-
-   let age = 19;
-   let res;
-
-   if (age >= 18) {
-      if (age <= 23) {
-         res = 'от 18 до 23';
-      } else {
-         res = 'больше 23';
-      }
-   } else {
-      res = 'меньше 18';
-   }
-
-   console.log(res);
+if (min >= 42 && min <= 60) {
+   console.log('3');
+}
