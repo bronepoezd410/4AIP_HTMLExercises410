@@ -1,15 +1,18 @@
 "use strict";
 
-   let num = 35;
+let lang = 'ru';
 
-   if (num >= 10 && num <= 99) {
-
-      num = String(num).split('');
-      let summary = Number(num[0]) + Number(num[1])
-
-    if (summary >= 9) {
-         alert('двухзначно');}
-	else {
-         alert('однозначно')}
-	
-   }
+switch (lang) {
+   case 'ru':
+	  console.log('рус');
+	  break;
+   case 'en':
+	  console.log('анг');
+	  break;
+   case 'de':
+	  console.log('нем');
+	  break;
+   default:
+	  console.log('язык не поддерживается');
+	  break;
+}
