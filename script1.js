@@ -1,32 +1,24 @@
 "use strict";
 
-   // let arr = ['a', 'b', 'c', 'd', 'e'];
-
-   // for (let k = 0; k <= arr.length - 1; k++) {
-   //    console.log(arr[k]);
-   // };
-
-
-   // let arr = ['a', 'b', 'c', 'd', 'e'];
+   // let arr = [2, 5, 9, 15, 1, 4];
 
    // for (let i = 0; i <= arr.length - 1; i++) {
-   //    if (i == 0 || i == arr.length - 1) {
+   //    if (arr[i] > 3 && arr[i] < 10) {
+   //       console.log(arr[i])
+   //    } else {
    //       continue;
    //    }
-   //    console.log(arr[i]);
    // };
 
-
-   // let arr = ['a', 'b', 'c', 'd', 'e'];
-   // let i = arr.length - 1;
-
-   // for (i; i >= 0; i--) {
-   //    console.log(arr3[i])
-   // };
+   // console.log('\n');
 
 
-   let arr = ['a', 'b', 'c', 'd', 'e'];
+   let obj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
 
-   for (let i = 0; i <= arr.length - 1; i++) {
-      console.log(arr[i]);
+   for (let key in obj) {
+      if (obj[key] % 2 == 0) {
+         console.log(obj[key]);
+      } else {
+         continue;
+      }
    }
