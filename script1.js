@@ -1,38 +1,34 @@
 "use strict";
 
-   // let res = 0
-   // let arr = [2, 5, 9, 3, 1, 4];
+   // let str1 = '';
 
-   // for (let i = 0; i <= arr.length - 1; i++) {
-   //    res = res + arr[i]
+   // for (let i = 0; i <= 5; i++) {
+   //    str += '-'
    // };
-   // console.log(res)
 
-   // let res = 0
-   // let arr = [2, 5, 9, 3, 1, 4];
+   // console.log(str)
 
-   // for (let i = 0; i <= arr.length - 1; i++) {
-   //    if (arr[i] % 2 == 0) {
-   //       res = res + arr[i]
-   //    } else {
-   //       continue;
-   //    }
+
+   // let str = '';
+
+   // for (let i = 1; i <= 9; i++) {
+   //    str += String(i)
    // };
-   // console.log(res)
 
-   // let res = 0
-   // let arr = [2, 5, 9, 3, 1, 4];
+   // console.log(str)
 
-   // for (let i = 0; i <= arr.length - 1; i++) {
-   //    res = res + arr[i] ** 2
+   // let str = '';
+
+   // for (let i = 9; i >= 1; i--) {
+   //    str += String(i)
    // };
-   // console.log(res3)
 
+   // console.log(str)
 
-   let res = 1;
-   let arr = [2, 5, 9, 3, 1, 4];
+   let str = '-';
 
-   for (let i = 0; i <= arr.length - 1; i++) {
-      res = res * arr[i] 
+   for (let i = 1; i <= 9; i++) {
+      str +=  String(i) + '-' 
    };
-   console.log(res4)
+
+   console.log(str)
