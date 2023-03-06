@@ -1,14 +1,20 @@
 "use strict";
-   for (let i = 1; i <= 9; i++) {
+   for (let i = 0; i <= 9; i++) {
       let num = 3;
-      console.log(num);
+      for (let j = 0; j <= 9; j++) {
+         console.log(num);
+      }
    }
-   for (let i = 1; i <= 9; i++) {
+   for (let i = 0; i <= 9; i++) {
       let num = 3;
+      for (let j = 0; j <= 9; j++) {
+      }
    }
    console.log(num);
-    let num;
-   for (let i = 1; i <= 9; i++) {
-      num = 3;
+   for (let i = 0; i <= 9; i++) {
+      for (let j = 0; j <= 9; j++) {
+         let num = 3;
+      }
+      console.log(num);
    }
    console.log(num);
