@@ -1,11 +1,13 @@
 "use strict";
+let obj = { a: 10, b: 20, c: 30, d: 40, e: 50 };
+let sum = 0;
 
-let arr = [10, 20, 30, 40, 21, 32, 51];
-
-for (let i of arr) {
-   if (String(i)[0] == '1' || String(i)[0] == '2') {
-      console.log(i);
+for (let elem in obj) {
+   if (obj[elem] == 10 || obj[elem] == 20) {
+      sum += obj[elem];
    } else {
       continue;
    };
 };
+
+console.log(sum);
