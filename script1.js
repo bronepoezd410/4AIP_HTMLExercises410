@@ -1,41 +1,32 @@
 "use strict";
 
-// console.log('');
-
-// let arr = ['a', 'b', 'c', 'd', 'e'];
-// let flag = false;
-
-// for (let elem of arr) {
-//    if (elem == 'c') {
-//       flag = true;
-//       break;
-//    }
-// }
-
-// if (flag === true) {
-//    console.log('+++');
-// } else {
-//    console.log('---');
-// }
 
 // console.log('');
 
-let num = 4;
-let flag = true;
-let i = 2;
+// let arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+// let count = 0;
 
-while (i < num) {
-   if (num % i == 0) {
-      flag = !flag;
-      break;
+// for (let i of arr) {
+//    if (i == 3) {
+//       count += 1
+//    } else {
+//       continue;
+//    };
+// };
 
+// console.log(count);
+
+// console.log('');
+
+let arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+let count = 0;
+
+for (let i of arr) {
+   if (i == 3 || i == 2) {
+      count += 1
    } else {
-      i += 1;
+      continue;
    };
 };
 
-if (flag) {
-   console.log(` ${num} простое`)
-} else {
-   console.log(` ${num}не простое`)
-}
+console.log(count);
