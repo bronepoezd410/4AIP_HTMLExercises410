@@ -2,20 +2,40 @@
 
 // console.log('');
 
-// let obj = {x: 1, y: 2, z: 3};
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// let flag = false;
 
-// for (let key in obj) {
-//    obj[key] = obj[key] ** 2;
-// };
+// for (let elem of arr) {
+//    if (elem == 'c') {
+//       flag = true;
+//       break;
+//    }
+// }
 
-// console.log(obj)
+// if (flag === true) {
+//    console.log('+++');
+// } else {
+//    console.log('---');
+// }
 
 // console.log('');
 
-let obj = {x: 1, y: 2, z: 3};
+let num = 4;
+let flag = true;
+let i = 2;
 
-for (let key in obj) {
-   obj[key] += 1
+while (i < num) {
+   if (num % i == 0) {
+      flag = !flag;
+      break;
+
+   } else {
+      i += 1;
+   };
 };
 
-console.log(obj)
+if (flag) {
+   console.log(` ${num} простое`)
+} else {
+   console.log(` ${num}не простое`)
+}
