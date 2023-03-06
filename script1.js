@@ -1,36 +1,34 @@
 "use strict";
 
-   // let str1 = '';
 
-   // for (let i = 0; i <= 5; i++) {
-   //    str += '-'
-   // };
-
-   // console.log(str)
+for (let i = 10; i <= 1000; i++) {
+   res = String(i);
+   console.log(res1[0]);
+};
 
 
-   // let str = '';
+let res = 0;
+for (let i = 10; i <= 1000; i++) {
+   str = String(i);
+   res = Number(str[0]) + Number(str[1])
+   console.log(res);
+};
 
-   // for (let i = 1; i <= 9; i++) {
-   //    str += String(i)
-   // };
-
-   // console.log(str)
-
-   // let str = '';
-
-   // for (let i = 9; i >= 1; i--) {
-   //    str += String(i)
-   // };
-
-   // console.log(str)
-
-   let str = '-';
-
-   
-
-   for (let i = 1; i <= 9; i++) {
-      str +=  String(i) + '-' 
+for (let i = 10; i <= 1000; i++) {
+   str = String(i);
+   if (str[0] == 1) {
+      console.log(Number(str));
+   } else {
+      continue;
    };
+};
 
-   console.log(str)
+
+for (let i = 10; i <= 1000; i++) {
+   str = String(i);
+   if (Number(str[0]) + Number(str[1])  == 5) {
+      console.log(Number(str));
+   } else {
+      continue;
+   };
+};
