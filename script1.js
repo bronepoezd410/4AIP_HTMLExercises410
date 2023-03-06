@@ -1,22 +1,29 @@
 "use strict";
 
-let str = 'hello world!!';
-let arr = str.split('') 
-let count = {};         
-let result = 0 
+// let arr = [1, 2, 3, 4, 5, 6];
 
-for (let item of arr) {
-   if (count[item] === undefined) {
-      count[item] = 1;
-   } else {
-      count[item]++;
-   }
-}
+// for (let i = 1; i <= arr.length; i++) {
+//     console.log([arr[i]]);
+// };
 
-for (let item in count) {
-   if(count[item] > 1) {
-      result += count[item]
-   };
+// let res = 0
+
+// for (let i = 1; i <= arr.length; i++) {
+//     res = arr[i] + arr[i + 1];
+//     console.log(res);
+// };
+
+// for (let i = 1; i <= arr.length; i++) {
+//     console.log(arr[i - 2], arr[i - 1]);
+// };
+
+// for (let i = 1; i <= arr.length; i++) {
+//     console.log(arr[i - 2] + arr[i - 1]);
+// };
+
+let res = 0;
+
+for (let i = 1; i <= arr.length; i++) {
+    res = arr[i - 1] + arr[i] + arr[i + 1];
+    console.log(res)
 };
-
-console.log(result);
