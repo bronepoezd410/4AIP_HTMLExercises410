@@ -1,21 +1,32 @@
 "use strict";
 
-   // let a = 1;
+   // let arr = ['a', 'b', 'c', 'd', 'e'];
 
-   // while (a <= 100) {
-   //    console.log(a)
-   //    a++;
-   // }
+   // for (let k = 0; k <= arr.length - 1; k++) {
+   //    console.log(arr[k]);
+   // };
 
-   // let a = 11;
 
-   // while (a <= 33) {
-   //    console.log(a)
-   //    a++;
-   // }
-   // let a = 14;
+   // let arr = ['a', 'b', 'c', 'd', 'e'];
 
-   while (a <= 1000) {
-      a = a * 3;
-      console.log(a);
+   // for (let i = 0; i <= arr.length - 1; i++) {
+   //    if (i == 0 || i == arr.length - 1) {
+   //       continue;
+   //    }
+   //    console.log(arr[i]);
+   // };
+
+
+   // let arr = ['a', 'b', 'c', 'd', 'e'];
+   // let i = arr.length - 1;
+
+   // for (i; i >= 0; i--) {
+   //    console.log(arr3[i])
+   // };
+
+
+   let arr = ['a', 'b', 'c', 'd', 'e'];
+
+   for (let i = 0; i <= arr.length - 1; i++) {
+      console.log(arr[i]);
    }
