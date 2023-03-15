@@ -1,34 +1,23 @@
 "use strict";
 
-// let arr = [
-//    [1, 2, 3],
-//    [4, 5],
-//    [6]
-// ];
+// let newArr = [];
 
-// let sum = 0;
-
-// for (let Arr of arr) {
-//    for (let nArr of Arr) {
-//       sum += nArr
+// for (let i = 0; i <= 2; i++) {
+//    newArr[i] = [];
+//    for (let k = 1; k <= 5; k++) {
+//       newArr[i].push(k)
 //    };
 // };
 
-// console.log(sum)
+// console.log(newArr);
 
+// let newArr = [];
 
-// let arr = [
-//    [[1, 2], [3, 4]],
-//    [[5, 6], [7, 8]]
-// ];
-
-// let sum = 0;
-
-// for (let Arr of arr) {
-//    for (let nArr of Arr) {
-//       for (let inArr of nArr) {
-//          sum += inArr
-//       };
+// for (let i = 0; i <= 2; i++) {
+//    newArr[i] = [];
+//    for (let k = 1; k <= 4; k++) {
+//       newArr[i].push('x')
 //    };
 // };
-// console.log(sum)
+
+// console.log(newArr);
