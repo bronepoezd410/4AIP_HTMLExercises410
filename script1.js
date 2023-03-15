@@ -1,45 +1,30 @@
-// "use strict";
+"use strict";
 
-// let obj = {
-//    key1: {
-//       key1: 1,
-//       key2: 2,
-//       key3: 3,
-//    },
-//    key2: {
-//       key1: 4,
-//       key2: 5,
-//       key3: 6,
-//    },
-//    key3: {
-//       key1: 7,
-//       key2: 8,
-//       key3: 9,
-//    },
-// };
+let obj = {
+   1: {
+      1: 11,
+      2: 12,
+      3: 13,
+   },
+   2: {
+      1: 21,
+      2: 22,
+      3: 23,
+   },
+   3: {
+      1: 24,
+      2: 25,
+      3: 26,
+   },
+};
 
-// let sum1 = obj.key1.key1 + obj.key1.key2 + obj.key1.key3;
-// let sum2 = obj.key2.key1 + obj.key2.key2 + obj.key2.key3;
-// let sum3 = obj.key3.key1 + obj.key3.key2 + obj.key3.key3;
+let result = 0;
 
-// console.log(sum1 + sum2 + sum3)
+for (let key in obj) {
+   let obj3 = obj[key];
+   for (let obj1 in obj3) {
+      result += obj3[obj1]
+   };
+};
 
-// let obj1 = {
-//    1: {
-//       1: 'a1',
-//       2: 'a2',
-//       3: 'a3',
-//    },
-//    2: {
-//       1: 'b1',
-//       2: 'b2',
-//       3: 'b3',
-//    },
-//    3: {
-//       1: 'c1',
-//       2: 'c2',
-//       3: 'c3',
-//    },
-// };
-// console.log(obj1[2][2]);
-// console.log(obj1[3][1]);
+console.log(result)
