@@ -1,12 +1,18 @@
 "use strict";
 
+function func(num = 5) {
+   console.log(num * num);
+}
 
-let aa = 1;
-let bb = 5;
-let cc = 3;
+func();
+func(6);
+func(1); 
 
-function three(a, b, c) {
-   return console.log(a + b + c);
+
+function function1(num1 = 0, num2 = 0) {
+   console.log(num1 + num2);
 };
 
-three(aa, bb, cc);
+function1(2, 3); 
+function1(3);    
+function1();    
