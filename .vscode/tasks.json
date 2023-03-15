@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create new branch",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/C",
+                "git checkout -b ${input:branchname} && git add . && git commit -m '${input:commitname}' && git push -u origin ${input:branchname}"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "branchname",
+            "type": "promptString",
+            "description": "Enter the name of the new branch",
+            "default": "new-branch"
+        },
+        {
+            "id": "commitname",
+            "type": "promptString",
+            "description": "Enter the commit message",
+            "default": "Initial commit"
+        }
+    ]
+}
