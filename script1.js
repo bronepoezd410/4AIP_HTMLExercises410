@@ -1,27 +1,19 @@
 "use strict";
 
+// let arr = [1, 2, 3];
+// arr.push(4, 5, 6);
+
+// console.log(arr);
 
 
-// let str = 'фыв';
+// let arr = [1, 2, 3];
+// arr.unshift(4, 5, 6);
 
-// console.log(str.toUpperCase());
-
-
-// let str = 'ФЫВ';
-
-// console.log(str.toLowerCase());
+// console.log(arr);
 
 
-// let str = 'фдщфыдвщдафщыдващфывда!';
+// let arr = [1, 2, 3];
+// console.log(arr.shift());
 
-// let a = str.substr(2, 3);
-// let a = str.substr(6, 10);
-// console.log(a, a);
-
-// let b = str.substring(2, 5);
-// let b = str.substring(6, 16);
-// console.log(b, b);
-
-// let c = str.slice(2, 5);
-// let c = str.slice(6, 16);
-// console.log(c, c);
+// let arr = [1, 2, 3];
+// console.log(arr.pop());
