@@ -29,22 +29,27 @@
 
 
    <body>
-      <p class="elem"></p>
-      <p class="elem"></p>
-      <p class="elem"></p>
-       <script>
-          window.onload = function () {
-             function appendText(selector, text) {
-                let elems = document.querySelectorAll(selector);
- 
-                for (let elem of elems) {
-                   elem.textContent += text;
-                }
-             }
-             appendText(".elem", "text");
-          };
-       </script>
-    </body>
+      <p class="elem">1</p>
+      <p class="elem">2</p>
+      <p class="elem">3</p>
+      <p class="elem">4</p>
+      <p class="elem">5</p>
+      <script>
+         window.onload = function () {
+            function forEach(collection, callback) {
+               for (let i = 0; i < collection.length; i++) {
+                  callback(collection[i]);
+               }
+            }
+
+            let paragraphs = document.querySelectorAll("p");
+
+            forEach(paragraphs, function (paragraph) {
+               paragraph.textContent += "!";
+            });
+         };
+      </script>
+   </body>
 
 
 
