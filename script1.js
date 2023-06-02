@@ -1,50 +1,44 @@
 
 console.log('||| 1 |||==');
 
-function func() {
-   return console.log('Hello world!');
+function func1() {
+   console.log('!');
 };
 
 console.log('||| 2 |||==');
 
-func();
+let func = function () {
+   console.log('!');
+};
+
+
 
 console.log('||| 3 |||==');
 
-console.log(func);
+func(); //выведет '!'
+
+function func() {
+   console.log('!');
+}
 
 console.log('||| 4 |||==');
 
-func = 1234;
+func(); 
 
-console.log(func);
+let func = function () {
+   console.log('!');
+};
 
 console.log('||| 5 |||==');
 
-function func1() {
-   return 3;
+let func1 = function () {
+   console.log('!')
 };
 
-console.log('||| 6 |||==');
-
-let func2 = func1;
-
-console.log('||| 7 |||==');
-
-console.log(func1() + func2());
-
-console.log('||| 8 |||==');
-
-let func3 = function () {
-   return 1;
+let func2 = function () {
+   console.log('!')
 };
 
-console.log('||| 9 |||==');
-
-let func4 = function () {
-   return 2;
+function func3() {
+   console.log('!')
 };
-
-console.log('||| 10 |||==');
-
-console.log(func3() + func4())
