@@ -1,65 +1,55 @@
 
 console.log("||| 1 |||==");
 
-function func1() {
+function test() {
+   let num1 = 1;
+   let num2 = 2;
+
    return function () {
-      return 1;
+      return num1 + num2;
    };
 }
 
-function func2() {
-   return function () {
-      return 2;
-   };
-};
-
-console.log(func1()() + func2()());
+let func = test();
+console.log(func()); // 3
 
 console.log("||| 2 |||==");
 
-function func() {
+function test2() {
+   let num1 = 1;
+   let num2 = 2;
+
    return function () {
-      return function () {
-         return function () {
-            return function () {
-               return "!";
-            };
-         };
-      };
+      return num1 + num2;
    };
 }
 
-console.log(func()()()()());
+console.log(test2()()); // 3
 
 console.log("||| 3 |||==");
 
-function func3(num1) {
-   return function (num2) {
-      return function (num3) {
-         return num1 + num2 + num3;
-      };
+function test3() {
+   let num1 = 1;
+
+   return function () {
+      return num1 + num2;
    };
 }
 
-console.log(func3(2)(3)(4));
+let num2 = 2;
+let func3 = test3();
+console.log(func3()); // 3
 
 console.log("||| 4 |||==");
 
-function func4(num1) {
-   let arr = [];
-   arr.push(num1);
-   return function (num2) {
-      arr.push(num2);
-      return function (num3) {
-         arr.push(num3);
-         return function (num4) {
-            arr.push(num4);
-            return function () {
-               return arr;
-            };
-         };
-      };
+function test4() {
+   let num = 1;
+
+   return function () {
+      return num;
    };
 }
 
-console.log(func4(2)(3)(4)(5)());
+let num = 2;
+let func4 = test4();
+console.log(func4()); // 1
