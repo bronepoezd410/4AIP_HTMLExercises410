@@ -1,101 +1,52 @@
-
 console.log("||| 1 |||==");
 
-let arr = {
-   a: 1,
-   b: { c: 2, d: 3, e: 4 },
-   f: { g: 5, j: 6, k: { l: 7, m: { n: 8, o: 9 } } },
-};
+let arr1 = [1, 2, 3, 4, 5];
+let newArr1 = [];
 
-function func(obj) {
-   for (let elem in obj) {
-      if (typeof obj[elem] == "object") {
-         func(obj[elem]);
-      } else {
-         console.log(obj[elem]);
-      }
-   }
-}
+let result = arr1.map(function (elem) {
+   newArr1.push(Math.pow(elem, 2));
+});
 
-func(arr);
+console.log(newArr1);
 
 console.log("||| 2 |||==");
 
-let arr2 = [1, [2, 7, 8], [3, 4, [5, [6, 7]]]];
+let arr2 = ["a", "b", "c", "d"];
 
-let newArr = [];
+let result2 = arr2.map(function (elem) {
+   return elem + "!";
+});
 
-function func2(array) {
-   for (let elem of array) {
-      if (typeof elem == "object") {
-         func2(elem);
-      } else {
-         newArr.push(elem);
-      }
-   }
-   return newArr;
-}
-
-console.log(func2(arr2));
+console.log(result2);
 
 console.log("||| 3 |||==");
 
-let obj = {
-   a: 1,
-   b: { c: 2, d: 3, e: 4 },
-   f: { g: 5, j: 6, k: { l: 7, m: { n: 8, o: 9 } } },
-};
+let arr3 = ["hello", "world", "andrey"];
 
-function func3(obj) {
-   let sum = 0;
+let result3 = arr3.map(function (elem) {
+   return elem.split("").reverse().join("");
+});
 
-   for (let elem in obj) {
-      if (typeof obj[elem] == "object") {
-         sum += func3(obj[elem]);
-      } else {
-         sum += obj[elem];
-      }
-   }
-
-   return sum;
-}
-
-console.log(func3(obj));
+console.log(result3);
 
 console.log("||| 4 |||==");
 
-let str = ["a", ["b", "c", "d"], ["e", "f", ["g", ["j", "k"]]]];
-let newStr = "";
+let arr4 = ["123", "456", "789"];
+let newArr4 = [];
 
-function func4(str) {
-   let sum = "";
+let result5 = arr4.map(function (elem) {
+   elem.split("");
+   return newArr4.push(Number(elem));
+});
 
-   for (let elem of str) {
-      if (typeof elem == "object") {
-         sum += func4(elem);
-      } else {
-         sum += elem;
-      }
-   }
-
-   return sum;
-}
-
-console.log(func4(str));
+console.log(newArr4);
 
 console.log("||| 5 |||==");
 
-let arr5 = [1, [2, 7, 8], [3, 4], [5, [6, 7]]];
+let arr6 = [1, 2, 3, 4, 5];
 
-function func5(arr) {
-   for (let i = 0; i < arr.length; i++) {
-      if (typeof arr[i] == "object") {
-           func5(arr[i]);
-      } else {
-         arr[i] = Math.pow(arr[i], 2);
-      }
-   };
-   return arr;
-}
+let result6 = arr6.map(function (elem, index) {
+   return elem * index;
+});
 
-console.log(func5(arr5));
+console.log(result6);
