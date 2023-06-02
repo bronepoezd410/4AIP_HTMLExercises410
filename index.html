@@ -28,27 +28,23 @@
 
 
 
-
-
- 
-
-
- 
-
-
-
    <body>
-      <button id="myButton">button</button>
-      <script>
-         window.onload = function () {
-            function setAttr(selector, attrName, attrValue) {
-               const elem = document.querySelector(selector);
-               elem.setAttribute(attrName, attrValue);
-            }
-            setAttr("#myButton", "disabled", true);
-         };
-      </script>
-   </body>
+      <p class="elem"></p>
+      <p class="elem"></p>
+      <p class="elem"></p>
+       <script>
+          window.onload = function () {
+             function appendText(selector, text) {
+                let elems = document.querySelectorAll(selector);
+ 
+                for (let elem of elems) {
+                   elem.textContent += text;
+                }
+             }
+             appendText(".elem", "text");
+          };
+       </script>
+    </body>
 
 
 
