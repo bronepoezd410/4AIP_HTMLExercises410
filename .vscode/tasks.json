@@ -21,10 +21,10 @@
             "id": "branchname",
             "type": "promptString",
             "description": "Enter the name of the new branch",
-            "default": "new-branch"
+            "default": "omegagigajs_16"
         },
         {
-            "id": "omegagigajs_16",
+            "id": "commitname",
             "type": "promptString",
             "description": "Enter the commit message",
             "default": "Initial commit"
