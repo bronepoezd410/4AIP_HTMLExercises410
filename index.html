@@ -37,32 +37,56 @@
 
 
    <body>
- 
-    <ul>
-         <li class="list">1</li>
-         <li class="list">1</li>
-         <li class="list">1</li>
-    </ul>
-     <script>
+    <input id="elem1" value="text" />
+    <input id="elem2" class="www zzz" />
+    <input id="elem3" />
+    <input id="elem4" />
+    <input id="elem5" value="text" />
+    <input id="elem6" value="text" />
 
-        let list = document.querySelectorAll(".list");
+    <script>
+       console.log("||| 1 |||==");
 
-        for (let elem of list) {
-           elem.addEventListener("click", func);
-        };
+       let elem1 = document.querySelector("#elem1");
+       let value = elem1.getAttribute("value");
 
-        function func() {
-         if (Number(this.textContent) < 10) {
-              this.textContent = Number(this.textContent) + 1
-         } else {
-              this.removeEventListener('click', func);
-         }
-        
-         
-        }
+       console.log(value);
 
-     </script>
-  </body>
+       console.log("||| 2 |||==");
+
+       let elem2 = document.querySelector("#elem2");
+       let class1 = elem2.getAttribute("class");
+
+       console.log(class1);
+
+       console.log("||| 3 |||==");
+
+       let elem3 = document.querySelector("#elem3");
+       elem3.setAttribute("value", "!!!");
+       let value3 = elem3.getAttribute("value");
+
+       console.log(value3);
+
+       console.log("||| 4 |||==");
+
+       let elem4 = document.querySelector("#elem4");
+       elem4.setAttribute("class", "valid");
+       let value4 = elem4.getAttribute("class");
+
+       console.log(value4);
+
+       console.log("||| 5 |||==");
+
+       let elem5 = document.querySelector("#elem5");
+       elem5.removeAttribute('value');
+
+       console.log("||| 6 |||==");
+
+       let elem6 = document.querySelector("#elem6");
+       console.log(elem6.hasAttribute('value'));
+
+    </script>
+ </body>
 
 
 
