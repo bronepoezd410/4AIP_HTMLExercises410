@@ -35,54 +35,29 @@
 
  
 
-   <style>
 
-    .par {
-         border: 1px solid black;
-         padding: 20px 30px;
-         display: inline-block;
-         margin-left: 20px;
-    }
+   <body>
 
-  </style>
-  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
 
-     <input class="input" type="text" value="0" />
-     <input class="input" type="text" value="0" />
-     <input class="input" type="text" value="0" />
+    <script>
 
-     <p class="par">2</p>
-     <p class="par">3</p>
-     <p class="par">4</p>
+       console.log("||| 1 |||==");
 
-     <script>
-        console.log("||| 1 |||==");
+       let divs = document.querySelectorAll("div");
 
-        let inputs = document.querySelectorAll(".input");
-        
+       for (let div of divs) {
+          div.addEventListener("click", function () {
+             this.textContent++;
+          });
+       }
 
-        for (let input of inputs) {
-         input.addEventListener("blur", func);
-        }
-
-        function func() {
-           this.value = Number(this.value) + 1;
-        }
-
-        console.log("||| 2 |||==");
-
-        let text = document.querySelectorAll(".par");
-
-        for (let elem of text) {
-         elem.addEventListener("click", func1);
-        }
-
-        function func1() {
-              this.textContent = Math.pow(Number(this.textContent), 2)
-        }
-
-     </script>
-  </body>
+    </script>
+ </body>
 
 
 
