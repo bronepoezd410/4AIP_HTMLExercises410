@@ -1,50 +1,65 @@
 
-console.log("====================== 1 ========================");
+console.log("||| 1 |||==");
 
-let func = (function () {
-   let num = 1;
+function each(arr, callback) {
+   let result = [];
 
-   return function () {
-      console.log(num);
-      num++;
-   };
-})();
+   for (let elem of arr) {
+      result.push(callback(elem));
+   }
 
-func();
-func();
-func();
-func();
-func();
+   return result;
+}
 
-console.log("====================== 2 ========================");
+let result = each([1, 2, 3, 4, 5], function (num) {
+   return num * 2;
+});
 
-let func5 = (function () {
-   let num = 1;
-   return function () {
-      if (num == 5) {
-         console.log(num);
-         num = 1;
-      } else {
-         console.log(num);
-         num++;
-      }
-   };
-})();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
-func5();
+console.log(result);
+
+console.log("||| 2 |||==");
+
+function each2(arr, callback) {
+   let result = [];
+
+   for (let elem of arr.reverse()) {
+      result.push(callback(elem));
+   }
+
+   return result;
+}
+
+let result2 = each2(["a", "b", "c", "d"], function (str) {
+   return str;
+});
+
+console.log(result2);
+
+console.log("||| 3 |||==");
+
+function each3(arr, callback) {
+   let result = [];
+
+   for (let elem of arr) {
+      result.push(
+         callback(elem.slice(0, 1).toUpperCase() + elem.slice(1))
+      );
+   }
+
+   return result;
+}
+
+let result3 = each3(["hello", "world", "andrey"], function (str) {
+   return str;
+});
+
+console.log(result3);
+
+console.log("||| 4 |||==");
+
+function square(num) {
+   return Math.pow(num, 3);
+}
+
+let result4 = each([1, 2, 3, 4, 5], square);
+console.log(result4);
