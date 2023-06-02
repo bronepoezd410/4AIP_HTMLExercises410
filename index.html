@@ -38,25 +38,45 @@
 
 
 
+   <style>
+    ul {
+       padding: 30px;
+       border: 1px solid red;
+    }
+    li {
+       list-style-type: none;
+       margin-bottom: 20px;
+       border: 1px dashed black;
+    }
+ </style>
+</head>
+<body>
 
-   <body>
-    <button id="elem">text</button>
+ <ul id="elem">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+ </ul>
 
-    <script>
-       let elem = document.querySelector("#elem");
+ <script>
 
-       elem.addEventListener("click", func);
-       elem.addEventListener("dblclick", func);
+    let ul = document.querySelector("#elem");
 
-       function func(event) {
-          if (event.type === "click") {
-             event.target.style.backgroundColor = "green";
-          } else if (event.type === "dblclick") {
-             event.target.style.backgroundColor = "red";
-          }
+    ul.addEventListener("click", function (event) {
+       let target = event.target;
+       if (target.tagName === "LI") {
+          target.textContent += "!";
+       } else if (target.tagName === "UL") {
+          let li = document.createElement("li");
+          li.textContent = "new item";
+          ul.appendChild(li);
        }
-    </script>
- </body>
+    });
+
+ </script>
+</body>
 
 
 
