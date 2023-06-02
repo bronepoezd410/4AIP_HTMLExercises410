@@ -44,15 +44,20 @@
 
    <body>
 
-    <input type="checkbox" id="elem">
+    <input id="elem" disabled />
+    <input id="button" type="submit" />
 
     <script>
+        
+       let elem = document.querySelector("#elem");
+       let button = document.querySelector("#button");
 
-         let elem = document.querySelector('#elem');
-         console.log(elem.checked);
-
+       button.addEventListener("click", function () {
+          elem.disabled = !elem.disabled;
+       });
+       
     </script>
-  </body>
+ </body>
 
 
 
