@@ -26,57 +26,31 @@
 
 
 
-
 <body>
-    <p id="elem1">1</p>
-    <p id="elem2">2</p>
-    <p id="elem3">3</p>
-
-    <div id="block">
-       <p>1</p>
-       <p>2</p>
-    </div>
-
-    <div class="block">
-       <p>1</p>
-       <p>2</p>
-    </div>
-
-    <p class="www">text</p>
-    <p class="www">text</p>
+    <input id="button1" type="submit" />
+    <input id="button2" type="submit" />
+    <input id="button3" type="submit" />
 
     <script>
-
        console.log("||| 1 |||==");
 
-       let p1 = document.querySelector("#elem1");
-       let p2 = document.querySelector("#elem2");
-       let p3 = document.querySelector("#elem3");
+       button1 = document.querySelector("#button1");
+       button2 = document.querySelector("#button2");
+       button3 = document.querySelector("#button3");
 
-       console.log(p1);
-       console.log(p2);
-       console.log(p3);
+       button1.addEventListener("click", function () {
+          document.write(1)
+       });
 
-       console.log("||| 2 |||==");
+       button2.addEventListener("click", function () {
+          document.write(2)
+       });
 
-       let pOne = document.querySelector("#block p");
-
-       console.log(pOne);
-
-       console.log("||| 3 |||==");
-
-       let p1One = document.querySelector(".block p");
-
-       console.log(p1One);
-
-       console.log("||| 3 |||==");
-
-       let www = document.querySelector(".www");
-
-       console.log(www);
+       button3.addEventListener("click", function () {
+          document.write(3)
+       });
 
     </script>
-    
  </body>
 
 
