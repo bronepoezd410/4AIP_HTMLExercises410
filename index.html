@@ -43,30 +43,45 @@
 
 
    <body>
-    <select id="months">
-       <option value="1">Январь</option>
-       <option value="2">Февраль</option>
-       <option value="3">Март</option>
-       <option value="4">Апрель</option>
-       <option value="5">Май</option>
-       <option value="6">Июнь</option>
-       <option value="7">Июль</option>
-       <option value="8">Август</option>
-       <option value="9">Сентябрь</option>
-       <option value="10">Октябрь</option>
-       <option value="11">Ноябрь</option>
-       <option value="12">Декабрь</option>
+    <input type="text" id="input" />
+    <select id="select">
+       <option value="1">Пункт 1</option>
+       <option value="2">Пункт 2</option>
+       <option value="3">Пункт 3</option>
+       <option value="4">Пункт 4</option>
+       <option value="5">Пункт 5</option>
+    </select>
+    <br />
+    <br />
+
+    <select id="weekday-select">
+       <option value="1">Понедельник</option>
+       <option value="2">Вторник</option>
+       <option value="3">Среда</option>
+       <option value="4">Четверг</option>
+       <option value="5">Пятница</option>
+       <option value="6">Суббота</option>
+       <option value="0">Воскресенье</option>
     </select>
     <script>
+
        window.onload = function () {
-          const today = new Date();
-          const currentMonth = today.getMonth() + 1;
-          const monthsSelect = document.getElementById("months");
-          const currentMonthOption = monthsSelect.querySelector(
-             `option[value="${currentMonth}"]`
-          );
-          currentMonthOption.selected = true;
+          const input = document.getElementById("input");
+          const select = document.getElementById("select");
+
+          input.addEventListener("blur", () => {
+             const value = parseInt(input.value);
+             if (!isNaN(value)) {
+                select.selectedIndex = value - 1;
+             }
+          });
+
+          const select1 = document.getElementById("weekday-select");
+          const today = new Date().getDay();
+          const option = select1.querySelector(`option[value="${today}"]`);
+          option.selected = true;
        };
+
     </script>
  </body>
 
