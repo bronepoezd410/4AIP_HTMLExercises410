@@ -1,18 +1,22 @@
 
 console.log('||| 1 |||==');
 
-function func() {
-   let num = 5;
-   return num;
-}
+let num = 1;
 
-console.log(num); // error
+function func1() {
+   num = 2;
+}
+func1();
+
+console.log(num); // 2
 
 console.log('||| 2 |||==');
 
-function func2() {
-   let num = 5;
-   return num;
-}
+let num1 = 1;
 
-console.log(func2()); // 5
+function func() {
+   let num1 = 2;
+}
+func();
+
+console.log(num1); // 1
