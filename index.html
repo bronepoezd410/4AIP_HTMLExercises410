@@ -1,50 +1,133 @@
 
-<body>
+
+<style>
+
      
-    <button id="btn1">button1</button><br /><br />
-    <button id="btn2">button2</button><br /><br />
-    <button id="btn3">button3</button><br /><br />
-    <button id="btn4">button4</button><br /><br />
+    .task {
+       width: 200px;
+       margin: 40px;
+       border: 1px solid black;
+       padding: 15px;
+    }
+
+ </style>
+ <body>
+
+    <div class="task">
+       <p id="p1">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+          inventore facere, ducimus delectus ex culpa.
+       </p>
+       <button id="btn1">button</button><br /><br />
+    </div>
+
+    <div class="task">
+       <p id="p2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+          inventore facere, ducimus delectus ex culpa.
+       </p>
+       <button id="btn2">button</button><br /><br />
+    </div>
+
+    <div class="task">
+        <p id="p3">
+           2
+        </p>
+        <p id="p4">
+            3
+          </p>
+        <button id="btn3">button</button><br /><br />
+     </div>
+
+     <div class="task">
+        <p id="p5">
+           2
+        </p>
+        <p id="p6">
+            2
+          </p>
+          <p id="p7">
+             2
+           </p>
+           <div id="result1"></div>
+        <button id="btn4">button</button><br /><br />
+     </div>
+
+     <div class="task">
+        <p id="p8">
+           0
+        </p>
+        <button id="btn5">button</button><br /><br />
+     </div>
+
+     <div class="task">
+        <p id="p9">
+           hello world
+        </p>
+        <button id="btn6">button</button><br /><br />
+     </div>
 
     <script>
 
        console.log("||| 1 |||==");
 
+       let p1 = document.querySelector("#p1");
        let button1 = document.querySelector("#btn1");
 
-       button1.addEventListener("dblclick", func1);
+       let messege = p1.textContent;
 
-       function func1() {
-          console.log("dblclick1");
-       }
+       button1.addEventListener("click", () => {
+          console.log(messege);
+       });
 
        console.log("||| 2 |||==");
 
+       let p2 = document.querySelector("#p2");
        let button2 = document.querySelector("#btn2");
 
-       button2.addEventListener("mouseover", () => {
-          console.log("mouseover2");
+       button2.addEventListener("click", () => {
+             p2.textContent = "Hello world";
        });
 
        console.log("||| 3 |||==");
 
+       let p3 = document.querySelector("#p3");
+       let p4 = document.querySelector("#p4");
        let button3 = document.querySelector("#btn3");
 
-       button3.addEventListener("mouseout", () => {
-          console.log("mouseout3");
+       button3.addEventListener("click", () => {
+             console.log(Number(p3.textContent) + Number(p4.textContent) )
        });
 
        console.log("||| 4 |||==");
 
+       let p5 = document.querySelector("#p5");
+       let p6 = document.querySelector("#p6");
+       let p7 = document.querySelector("#p7");
+       let result = document.querySelector("#result1")
        let button4 = document.querySelector("#btn4");
 
-       button4.addEventListener("mouseover", () => {
-          console.log("mouseover4");
-       });
+       button4.addEventListener("click", () => {
+        result.textContent = Number(p5.textContent) + Number(p6.textContent) + Number(p7.textContent)
+       })
 
-       button4.addEventListener("mouseout", () => {
-          console.log("mouseout4");
-       });
+       console.log("||| 5 |||==");
+
+       let p8 = document.querySelector("#p8");
+       let button5 = document.querySelector("#btn5");
+
+       button5.addEventListener('click', () => {
+        p8.textContent = Number(p8.textContent) + 1
+       })
+
+       console.log("||| 6 |||==");
+
+       let p9 = document.querySelector("#p9");
+       let button6 = document.querySelector("#btn6");
+
+       button6.addEventListener('click', () => {
+        p9.textContent += '!'
+       })
 
     </script>
  </body>
