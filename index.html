@@ -41,47 +41,21 @@
 
 
 
-
    <body>
-    <input type="text" id="input" />
-    <select id="select">
-       <option value="1">Пункт 1</option>
-       <option value="2">Пункт 2</option>
-       <option value="3">Пункт 3</option>
-       <option value="4">Пункт 4</option>
-       <option value="5">Пункт 5</option>
-    </select>
-    <br />
-    <br />
-
-    <select id="weekday-select">
-       <option value="1">Понедельник</option>
-       <option value="2">Вторник</option>
-       <option value="3">Среда</option>
-       <option value="4">Четверг</option>
-       <option value="5">Пятница</option>
-       <option value="6">Суббота</option>
-       <option value="0">Воскресенье</option>
+    <select id="mySelect">
+       <option value="1">Один</option>
+       <option value="2">Два</option>
+       <option value="3">Три</option>
     </select>
     <script>
-
        window.onload = function () {
-          const input = document.getElementById("input");
-          const select = document.getElementById("select");
+          const mySelect = document.getElementById("mySelect");
+          const options = mySelect.options;
 
-          input.addEventListener("blur", () => {
-             const value = parseInt(input.value);
-             if (!isNaN(value)) {
-                select.selectedIndex = value - 1;
-             }
-          });
-
-          const select1 = document.getElementById("weekday-select");
-          const today = new Date().getDay();
-          const option = select1.querySelector(`option[value="${today}"]`);
-          option.selected = true;
+          for (let i = 0; i < options.length; i++) {
+             options[i].text += " " + options[i].value;
+          }
        };
-
     </script>
  </body>
 
