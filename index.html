@@ -31,49 +31,28 @@
 
 
  
+
    <body>
 
-    <div id="elem1" class="content no-gap"></div>
-    <button id="btn1">button</button>
+    <img id="image" src="avatar.png">
 
-    <div id="elem2"></div>
-    <button id="btn2">button</button>
+    <img id="image2" src="avatar.png" width="300" height="500">
 
-    <div id="elem3" class="aaa bbb ccc"></div>
-    <button id="btn3">button</button>
+     <script>
 
-    <script>
+        console.log("||| 1 |||==");
 
-       console.log("||| 1 |||==");
+        document.querySelector('#image').src = 'favicon.ico';
 
-       let div1 = document.querySelector("#elem1");
-       let button1 = document.querySelector("#btn1");
+        console.log("||| 2 |||==");
+        
+         let img2 = document.querySelector('#image2');
+         img2.src = 'favicon.ico'
+         img2.height = '100'
+         img2.width = '200'
 
-       button1.addEventListener("click", () => {
-          console.log(div1.className);
-       });
-
-       console.log("||| 2 |||==");
-
-       let div2 = document.querySelector("#elem2");
-       let button2 = document.querySelector("#btn2");
-
-       button2.addEventListener("click", () => {
-          div2.className = "main";
-       });
-
-       console.log("||| 2 |||==");
-
-       let div3 = document.querySelector("#elem3");
-       let button3 = document.querySelector("#btn3");
-
-       button3.addEventListener("click", () => {
-        let arr = [div3.classList[0], div3.classList[1], div3.classList[2]]
-        console.log(arr)
-       });
-
-    </script>
- </body>
+     </script>
+  </body>
 
 
 
