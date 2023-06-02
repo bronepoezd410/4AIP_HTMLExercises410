@@ -38,45 +38,33 @@
 
 
 
-   <style>
-    ul {
-       padding: 30px;
-       border: 1px solid red;
-    }
-    li {
-       list-style-type: none;
-       margin-bottom: 20px;
-       border: 1px dashed black;
-    }
- </style>
-</head>
-<body>
+   <body>
+    <input />
+    <br />
+    <br />
+    <!-- 2 -->
+    <input type="text" id="myInput" />
+    <p id="myParagraph"></p>
 
- <ul id="elem">
-    <li>text</li>
-    <li>text</li>
-    <li>text</li>
-    <li>text</li>
-    <li>text</li>
- </ul>
+    <script>
+        
+       let elem = document.querySelector("input");
+       elem.addEventListener("keypress", function (event) {
+          console.log(event.code);
+       });
 
- <script>
 
-    let ul = document.querySelector("#elem");
+       let input = document.querySelector("#myInput");
+       let paragraph = document.querySelector("#myParagraph");
 
-    ul.addEventListener("click", function (event) {
-       let target = event.target;
-       if (target.tagName === "LI") {
-          target.textContent += "!";
-       } else if (target.tagName === "UL") {
-          let li = document.createElement("li");
-          li.textContent = "new item";
-          ul.appendChild(li);
-       }
-    });
-
- </script>
-</body>
+       input.addEventListener("keyup", function (event) {
+          if (event.keyCode === 13) {
+             paragraph.textContent = input.value;
+             input.value = "";
+          }
+       });
+    </script>
+ </body>
 
 
 
