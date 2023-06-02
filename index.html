@@ -41,21 +41,42 @@
 
    <body>
 
-    <ul id="elem">
-         <li>text1</li>
+    <div id="elem"></div>
+
+    <ul>
+         <li>text</li>
          <li>text</li>
          <li>text</li>
          <li>text</li>
          <li>text</li>
     </ul>
 
+    <p class="www">elem 1</p>
+    <p class="www">elem 2</p>
+    <p class="www">elem 3</p>
+
      <script>
 
-         let parent = document.querySelector('#elem');
-         let text = parent.firstElementChild.innerHTML;
+         console.log("||| 1 |||==");
 
-         console.log(text);
+         let elem = document.getElementById('elem');
+         elem.textContent = 'text'
 
+         console.log("||| 2 |||==");
+
+         let elems = document.getElementsByTagName('li');
+
+         for (let elem of elems) {
+              elem.textContent += '!'
+         }
+
+         console.log("||| 2 |||==");
+         let elems2 = document.getElementsByClassName('www');
+
+         for (let elem of elems2) {
+              elem.innerHTML = '!!!';
+         }
+         
      </script>
   </body>
 
