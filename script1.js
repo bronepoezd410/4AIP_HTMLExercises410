@@ -1,55 +1,160 @@
 
 console.log("||| 1 |||==");
 
-function test() {
-   let num1 = 1;
-   let num2 = 2;
-
-   return function () {
-      return num1 + num2;
-   };
-}
-
-let func = test();
-console.log(func()); // 3
-
-console.log("||| 2 |||==");
-
-function test2() {
-   let num1 = 1;
-   let num2 = 2;
-
-   return function () {
-      return num1 + num2;
-   };
-}
-
-console.log(test2()()); // 3
-
-console.log("||| 3 |||==");
-
-function test3() {
-   let num1 = 1;
-
-   return function () {
-      return num1 + num2;
-   };
-}
-
-let num2 = 2;
-let func3 = test3();
-console.log(func3()); // 3
-
-console.log("||| 4 |||==");
-
-function test4() {
+function test1() {
    let num = 1;
 
    return function () {
-      return num;
+      console.log(num);
+      num++;
    };
 }
 
-let num = 2;
-let func4 = test4();
-console.log(func4()); // 1
+let func = test1();
+func();
+func();
+
+console.log("||| 2 |||==");
+
+function test3() {
+   let num = 10;
+
+   return function () {
+      console.log(num);
+      num--;
+   };
+}
+
+let func3 = test3();
+
+func3();
+func3();
+
+console.log("||| 3 |||==");
+
+function test2() {
+   let num = 10;
+
+   return function () {
+      if (num >= 0) {
+         console.log(num);
+         num--;
+      } else {
+         console.log("Подсчет закончен");
+      }
+   };
+}
+
+let func2 = test2();
+
+func2();
+func2();
+func2();
+func2();
+func2();
+func2();
+func2();
+func2();
+func2();
+func2();
+func2();
+func2();
+
+console.log("||| 4 |||==");
+
+function func4() {
+   let num = 0;
+
+   return function () {
+      console.log(num);
+      num++;
+   };
+}
+
+func4()(); // 0
+func4()(); // 0
+func4()(); // 0
+
+console.log("||| 5 |||==");
+
+function func5() {
+   let num = 0;
+
+   return function () {
+      console.log(num);
+      num++;
+   };
+}
+
+let test5 = func5;
+
+test5()(); // 0
+test5()(); // 0
+test5()(); // 0
+
+console.log("||| 6 |||==");
+
+let counter = 0;
+
+function test55() {
+   return function () {
+      console.log(counter);
+      counter++;
+   };
+}
+
+let func55 = test55;
+
+let func56 = func55();
+let func57 = func55();
+
+func56(); // 0
+func57(); // 1
+func56(); // 2
+func57(); // 3
+
+console.log("||| 7 |||==");
+
+function test66() {
+   let counter = 0;
+
+   return function () {
+      return function () {
+         console.log(counter);
+         counter++;
+      };
+   };
+}
+
+let func66 = test66()();
+
+let func67 = func66;
+let func68 = func66;
+
+func67(); // 0
+func68(); // 1
+func67(); // 2
+func68(); 
+
+console.log("||| 8 |||==");
+
+function test80() {
+   let counter = 0;
+
+   return function () {
+      return function () {
+         console.log(counter);
+         counter++;
+      };
+   };
+}
+
+let func80 = test80();
+
+let func81 = func80();
+let func82 = func80();
+
+func81(); // 0
+func82(); // 1
+func81(); // 2
+func82(); // 3
