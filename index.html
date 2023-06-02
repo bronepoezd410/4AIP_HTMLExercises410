@@ -18,38 +18,28 @@
 
 
 
-
    <body>
-      <div id="div1">10</div>
-      <div id="div2">10</div>
+      <div id="div">3</div>
+      <button id="btn">click me</button>
       <script>
-         (function () {
-            let elem = document.querySelector("#div1"); 
+         window.onload = function () {
+            (function (selector1, selector2, selector3, selector4) {
+               let input1 = document.querySelector(selector1);
+               let input2 = document.querySelector(selector2);
+               let input3 = document.querySelector(selector3);
+               let button = document.querySelector(selector4);
 
-            function func(num) {
-               return num * num; 
-            }
-
-            elem.addEventListener("click", function () {
-               this.textContent = func(elem.textContent);
-            });
-         })();
-
-         (function () {
-            let elem = document.querySelector("#div2"); 
-
-            function func(num) {
-               return num * num * num; 
-            }
-
-            elem.addEventListener("click", function () {
-               this.textContent = func(elem.textContent);
-            });
-         })();
+               button.addEventListener("click", function () {
+                  let sum =
+                     Number(input1.value) +
+                     Number(input2.value) +
+                     Number(input3.value);
+                  console.log(sum);
+               });
+            })("#input1", "#input2", "#input3", "#button");
+         };
       </script>
    </body>
-
-
 
 
 
