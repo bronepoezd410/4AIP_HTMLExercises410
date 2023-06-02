@@ -34,22 +34,37 @@
 
    <body>
 
-    <img id="image" src="avatar.png">
-
-    <img id="image2" src="avatar.png" width="300" height="500">
+    <input id="input" type="text" value="Инпут">
+    <button id="btn">0</button>
 
      <script>
 
         console.log("||| 1 |||==");
 
-        document.querySelector('#image').src = 'favicon.ico';
+        let input = document.querySelector('#input');
+
+        input.addEventListener('focus', funcFocus);
+
+        function funcFocus() {
+         this.value = '1';
+        };
+
+        input.addEventListener('blur', funcBlur);
+
+        function funcBlur() {
+         this.value = '2';
+        };
 
         console.log("||| 2 |||==");
         
-         let img2 = document.querySelector('#image2');
-         img2.src = 'favicon.ico'
-         img2.height = '100'
-         img2.width = '200'
+        let button = document.querySelector("#btn");
+
+        button.addEventListener("click", addOne);
+
+        function addOne() {
+         let sum = (Number(this.textContent) + 1 )
+         this.textContent = sum
+        }
 
      </script>
   </body>
