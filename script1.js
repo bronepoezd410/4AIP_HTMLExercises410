@@ -1,11 +1,13 @@
 console.log("||| 1 |||==");
 
-let arr = ["John", "Smit", "development"];
+function func() {
+   return (
+      String(new Date().getFullYear()) 
+      + " " +
+      String(new Date().getMonth() + 1) 
+      + " " +
+      String(new Date().getDate())
+   );
+}
 
-let [name, surname, department, programmer = 'programmer', year = 200] = arr
-
-console.log(name)
-console.log(surname)
-console.log(department)
-console.log(programmer)
-console.log(year)
+console.log(func());
