@@ -34,24 +34,52 @@
 
 
  
-   <body>
 
-    <p class="elem1"></p>
-    <p class="elem1"></p>
-    <p class="elem1"></p>
-    <button id="button1">Button</button>
+   <style>
+
+    .par {
+         border: 1px solid black;
+         padding: 20px 30px;
+         display: inline-block;
+         margin-left: 20px;
+    }
+
+  </style>
+  <body>
+
+     <input class="input" type="text" value="0" />
+     <input class="input" type="text" value="0" />
+     <input class="input" type="text" value="0" />
+
+     <p class="par">2</p>
+     <p class="par">3</p>
+     <p class="par">4</p>
 
      <script>
+        console.log("||| 1 |||==");
 
-         let elems = document.querySelectorAll(".elem1");
-         let btn = document.querySelector('#button1')
+        let inputs = document.querySelectorAll(".input");
+        
 
-         btn.addEventListener('click', () => {
-              console.log(elems)
-              for (let elem of elems) {
-                   elem.textContent = 'text';
-              }
-         })
+        for (let input of inputs) {
+         input.addEventListener("blur", func);
+        }
+
+        function func() {
+           this.value = Number(this.value) + 1;
+        }
+
+        console.log("||| 2 |||==");
+
+        let text = document.querySelectorAll(".par");
+
+        for (let elem of text) {
+         elem.addEventListener("click", func1);
+        }
+
+        function func1() {
+              this.textContent = Math.pow(Number(this.textContent), 2)
+        }
 
      </script>
   </body>
