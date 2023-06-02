@@ -1,53 +1,71 @@
 
-console.log('||| 1 |||==');
+console.log("||| 1 |||==");
 
-let newobj = {
-   func1: function () { return 1 },
-   func2: function () { return 2 },
-   func3: function () { return 3 },
+function func1() {
+   return 1;
+}
+
+function func2() {
+   return 2;
+}
+
+function func3() {
+   return 3;
+}
+
+function test(num1, num2, num3) {
+   return num1 + num2 + num3;
+}
+
+console.log(test(func1(), func2(), func3()));
+
+console.log("||| 2 |||==");
+
+let func4 = () => {
+   return 1;
 };
 
-let sum = newobj.func1() + newobj.func2() + newobj.func3();
-
-console.log(sum);
-
-console.log('||| 2 |||==');
-
-for (let elem in newobj) {
-   console.log(newobj[elem]())
+let func5 = () => {
+   return 2;
 };
 
-console.log('||| 3 |||==');
+let func6 = () => {
+   return 3;
+};
 
-let arrNum = [1, 2, 3, 4, 5];
+let test1 = (num1, num2, num3) => {
+   return num1 + num2 + num3;
+};
 
-const calcArr = {
+console.log(test1(func4(), func5(), func6()));
 
-   sumArr: function (arr) {
-      let sum = 0;
-      for (let elem of arr) {
-         sum += elem
-      }
-      return sum;
+console.log("||| 3 |||==");
+
+test(function (num) {
+   return num ** 3;
+});
+
+function func() {
+   console.log(func(3));
+}
+
+console.log("||| 4 |||==");
+
+let func = function () {
+   console.log(func(3));
+};
+
+console.log("||| 5 |||==");
+
+function test(num, func1, func2) {
+   return func1(num) + func2(num);
+}
+test(
+   2,
+   function (num) {
+      return num * num;
    },
-
-   sumArrSquare: function (arr) {
-      let sum = 0;
-      for (let elem of arr) {
-         sum += Math.pow(elem, 2)
-      }
-      return sum;
-   },
-
-   sumArrCube: function (arr) {
-      let sum = 0;
-      for (let elem of arr) {
-         sum += Math.pow(elem, 3)
-      }
-      return sum;
+   function (num) {
+      return num * num * num;
    }
-};
-
-console.log(`Сумма элементов массива ${arrNum} = ${ calcArr.sumArr(arrNum) }`);
-console.log(`Сумма квадратов элементов массива ${arrNum} = ${ calcArr.sumArrSquare(arrNum) }`);
-console.log(`Сумма кубов элементов массива ${arrNum} = ${ calcArr.sumArrCube(arrNum) }`)
+);
