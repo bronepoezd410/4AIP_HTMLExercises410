@@ -1,160 +1,130 @@
 
 console.log("||| 1 |||==");
 
-function test1() {
-   let num = 1;
-
-   return function () {
-      console.log(num);
-      num++;
-   };
-}
-
-let func = test1();
-func();
-func();
+!(function () {
+   console.log("!");
+})(); // !
 
 console.log("||| 2 |||==");
 
-function test3() {
-   let num = 10;
-
-   return function () {
-      console.log(num);
-      num--;
-   };
-}
-
-let func3 = test3();
-
-func3();
-func3();
-
+/*function() {
+console.log('!');
+ }(); // error
+ */
 console.log("||| 3 |||==");
 
-function test2() {
-   let num = 10;
+let result = (function () {
+   return "!";
+})();
 
-   return function () {
-      if (num >= 0) {
-         console.log(num);
-         num--;
-      } else {
-         console.log("Подсчет закончен");
-      }
-   };
-}
-
-let func2 = test2();
-
-func2();
-func2();
-func2();
-func2();
-func2();
-func2();
-func2();
-func2();
-func2();
-func2();
-func2();
-func2();
+console.log(result); // !
 
 console.log("||| 4 |||==");
 
-function func4() {
-   let num = 0;
+let result4 = function () {
+   return "!";
+};
 
-   return function () {
-      console.log(num);
-      num++;
-   };
-}
-
-func4()(); // 0
-func4()(); // 0
-func4()(); // 0
+console.log(result4); // код функции
 
 console.log("||| 5 |||==");
 
-function func5() {
-   let num = 0;
+let result5 = function () {
+   return "!";
+};
 
-   return function () {
-      console.log(num);
-      num++;
-   };
-}
-
-let test5 = func5;
-
-test5()(); // 0
-test5()(); // 0
-test5()(); // 0
+console.log(result5()); // !
 
 console.log("||| 6 |||==");
 
-let counter = 0;
+let result6 =
+   (function () {
+      return 1;
+   })() +
+   (function () {
+      return 2;
+   })();
 
-function test55() {
-   return function () {
-      console.log(counter);
-      counter++;
-   };
-}
-
-let func55 = test55;
-
-let func56 = func55();
-let func57 = func55();
-
-func56(); // 0
-func57(); // 1
-func56(); // 2
-func57(); // 3
+console.log(result6); // 3
 
 console.log("||| 7 |||==");
 
-function test66() {
-   let counter = 0;
+let result7 = (function () {
+   return "!";
+})();
 
-   return function () {
-      return function () {
-         console.log(counter);
-         counter++;
-      };
-   };
-}
-
-let func66 = test66()();
-
-let func67 = func66;
-let func68 = func66;
-
-func67(); // 0
-func68(); // 1
-func67(); // 2
-func68(); 
+console.log(result7); // !
 
 console.log("||| 8 |||==");
 
-function test80() {
-   let counter = 0;
+let result8 = (function () {
+   return "!";
+})();
 
+console.log(result8); // !
+
+console.log("||| 9 |||==");
+
+let result9 = function () {
+   return "!";
+};
+
+console.log(result9); // код функции
+
+console.log("||| 10 |||==");
+
+let result10 = function () {
+   return "!";
+};
+
+console.log(result10()); // !
+
+console.log("||| 11 |||==");
+
+(function (num1, num2) {
+   console.log(num1 + num2);
+})(1, 2); // 3
+
+console.log("||| 12 |||==");
+
+(function () {
    return function () {
       return function () {
-         console.log(counter);
-         counter++;
+         console.log("!");
       };
    };
-}
+})()()();
 
-let func80 = test80();
+console.log("||| 13 |||==");
 
-let func81 = func80();
-let func82 = func80();
+(function (num1) {
+   return function (num2) {
+      console.log(num1 + num2);
+   };
+})(1)(2);
 
-func81(); // 0
-func82(); // 1
-func81(); // 2
-func82(); // 3
+console.log("||| 14 |||==");
+
+(function (num1) {
+   return function (num2) {
+      return function (num3) {
+         console.log(num1 + num2 + num3);
+      };
+   };
+})(1)(2)(3);
+
+console.log("||| 15 |||==");
+
+let str = "str";
+
+(function () {
+   console.log(1);
+})(); // 1
+
+console.log("||| 16 |||==");
+
+let str3 = "str"
+
+(function () {
+   console.log(1);
+})(); // error
