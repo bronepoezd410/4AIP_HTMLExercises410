@@ -24,7 +24,7 @@
             "default": "new-branch"
         },
         {
-            "id": "commitname",
+            "id": "omegagigajs_16",
             "type": "promptString",
             "description": "Enter the commit message",
             "default": "Initial commit"
