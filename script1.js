@@ -1,209 +1,65 @@
+
 console.log("||| 1 |||==");
 
-function test1() {
-   let num = 1;
-
-   function func() {
-      console.log(num);
-   }
-
-   func();
+function func1() {
+   return function () {
+      return 1;
+   };
 }
 
-test1(); // 1
+function func2() {
+   return function () {
+      return 2;
+   };
+};
+
+console.log(func1()() + func2()());
 
 console.log("||| 2 |||==");
 
-function test2() {
-   let num = 1;
-
-   function func() {
-      console.log(num);
-   }
+function func() {
+   return function () {
+      return function () {
+         return function () {
+            return function () {
+               return "!";
+            };
+         };
+      };
+   };
 }
 
-test2(); // нечего т к не вызвали функцию func
+console.log(func()()()()());
 
 console.log("||| 3 |||==");
 
-function test3() {
-   let num = 1;
-
-   function func() {
-      console.log(num);
-   }
-
-   func();
+function func3(num1) {
+   return function (num2) {
+      return function (num3) {
+         return num1 + num2 + num3;
+      };
+   };
 }
 
-// нечего, т к не вызвали функцию test3
+console.log(func3(2)(3)(4));
 
 console.log("||| 4 |||==");
 
-function test4() {
-   let num;
-
-   function func() {
-      console.log(num);
-   }
-
-   num = 1;
-   func();
-
-   num = 2;
-   func();
+function func4(num1) {
+   let arr = [];
+   arr.push(num1);
+   return function (num2) {
+      arr.push(num2);
+      return function (num3) {
+         arr.push(num3);
+         return function (num4) {
+            arr.push(num4);
+            return function () {
+               return arr;
+            };
+         };
+      };
+   };
 }
 
-test4(); // 1   2
-
-console.log("||| 5 |||==");
-
-function test5(num1, num2) {
-   function func() {
-      console.log(num1 + num2);
-   }
-
-   func();
-}
-
-test5(1, 2); // 3
-
-console.log("||| 6 |||==");
-
-function test6(num1, num2) {
-   function func() {
-      console.log(num1 + num2);
-   }
-
-   num1 = 2;
-   func();
-}
-
-test6(1, 2); // 4
-
-console.log("||| 7 |||==");
-
-function test7(num) {
-   function func(localNum) {
-      console.log(localNum);
-   }
-
-   func(num);
-}
-
-test7(1); // 1
-
-console.log("||| 8 |||==");
-
-function test8(num) {
-   function func(localNum) {
-      console.log(localNum);
-   }
-
-   func(num + 1);
-}
-
-test8(1); // 2
-
-console.log("||| 9 |||==");
-
-function test9(num) {
-   function func(localNum) {
-      console.log(num);
-   }
-
-   func(num + 1);
-}
-
-test9(1); // 1
-
-console.log("||| 10 |||==");
-
-function test10(num) {
-   function func(localNum) {
-      localNum = 2;
-   }
-
-   func(num);
-   console.log(num);
-}
-
-test10(1); // 1
-
-console.log("||| 11 |||==");
-
-/* function test11(num) {
-   function func(localNum) {
-      localNum = 2;
-   }
-
-   func(num);
-   console.log(localNum);
-}
-
-test11(1); // error
-*/
-
-console.log("||| 12 |||==");
-
-function test12(num) {
-   function func(localNum) {
-      num = 2;
-   }
-
-   func(num);
-   console.log(num);
-}
-
-test12(1); // 2
-
-console.log("||| 13 |||==");
-
-function test13(num) {
-   function func(num) {
-      console.log(num);
-   }
-
-   func(num);
-}
-
-test13(1); // 1
-
-console.log("||| 14 |||==");
-
-function test14(num) {
-   function func(num) {
-      num = 2;
-   }
-
-   func(num);
-   console.log(num);
-}
-
-test14(1); // 1
-
-console.log("||| 15 |||==");
-
-function test15(num) {
-   function func(num) {
-      console.log(num);
-   }
-
-   num = 2;
-   func(num);
-}
-
-test15(1); // 2
-
-console.log("||| 16 |||==");
-
-function test16(num) {
-   function func(num) {
-      console.log(num);
-   }
-
-   func(num);
-   num = 2;
-}
-
-test16(1); // 1
+console.log(func4(2)(3)(4)(5)());
