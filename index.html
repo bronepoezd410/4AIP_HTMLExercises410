@@ -45,30 +45,25 @@
 
    <body>
 
-    <ul>
-         <li>2000</li>
-         <li>2004</li>
-         <li>2021</li>
-         <li>2022</li>
-         <li>2025</li>
-         <li>2031</li>
-     </ul>
+    <input class="cls" type="text" value="" placeholder="число">
+    <input class="cls" type="text" value="" placeholder="число">
+    <input class="cls" type="text" value="" placeholder="число">
+    <button id="task">Click</button>
+    <input id="sum" type="text" value=""> 
 
      <script>
-         
-         let elems = document.querySelectorAll('li');
-         let sum = 0;
+        var elem = document.getElementById("task");
+        elem.addEventListener("click", func);
+        var elem1 = document.getElementsByClassName("cls");
 
-         for (let elem of elems) {
-              let text = +elem.textContent;
-              
-              if (text % 6 === 0) {
-                   sum += text;
-              }
-         }
-
-         console.log(sum)
-
+        function func() {
+           var sum = 0;
+           for (var i = 0; i < elem1.length; i++) {
+              sum += +elem1[i].value;
+           }
+           var newElem = document.getElementById("sum");
+           newElem.value = sum;
+        }
      </script>
   </body>
 
