@@ -38,41 +38,37 @@
 
 
    <body>
-    <a href="http://example.com">Example Link</a>
-    <a href="http://google.com">Google Link</a>
-    <a href="http://facebook.com">Facebook Link</a>
-    <br />
-    <br />
-
-    <input type="text" id="input1" />
-    <input type="text" id="input2" />
-    <p id="result"></p>
-    <a href="#" id="calculate">Calculate</a>
-
+    <div id="container">
+       <div id="first">
+          <div id="second">
+             <button id="button">Click me!</button>
+          </div>
+       </div>
+    </div>
     <script>
-       const links = document.querySelectorAll("a");
+       window.onload = function () {
+          const container = document.querySelector("#container");
+          const first = document.querySelector("#first");
+          const second = document.querySelector("#second");
+          const button = document.querySelector("#button");
 
-       links.forEach((link) => {
-          link.addEventListener("click", (event) => {
-             event.preventDefault();
-             link.textContent += link.href;
+          container.addEventListener("click", (event) => {
+             console.log(`Click on ${event.target.tagName} in container`);
           });
-       });
-       //   2
-       let input1 = document.getElementById("input1");
-       let input2 = document.getElementById("input2");
-       let result = document.getElementById("result");
-       let calculateBtn = document.getElementById("calculate");
 
-       calculateBtn.addEventListener("click", function (event) {
-          event.preventDefault();
+          first.addEventListener("click", (event) => {
+             console.log(`Click on ${event.target.tagName} in first`);
+          });
 
-          let num1 = +input1.value;
-          let num2 = +input2.value;
-          let sum = num1 + num2;
+          second.addEventListener("click", (event) => {
+             console.log(`Click on ${event.target.tagName} in second`);
+          });
 
-          result.textContent = sum;
-       });
+          button.addEventListener("click", (event) => {
+             console.log(`Click on ${event.target.tagName} in button`);
+          });
+          // focus
+       };
     </script>
  </body>
 
