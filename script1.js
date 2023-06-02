@@ -1,13 +1,6 @@
-console.log("||| 1 |||==");
+let arr = [2025, 12, 31];
+let year;
+let month;
+let day;
 
-function func() {
-   return (
-      String(new Date().getFullYear()) 
-      + " " +
-      String(new Date().getMonth() + 1) 
-      + " " +
-      String(new Date().getDate())
-   );
-}
-
-console.log(func());
+[year, month, day] = arr;
