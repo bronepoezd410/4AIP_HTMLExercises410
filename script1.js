@@ -1,8 +1,9 @@
-          
-         console.log("||| 1 |||==");
+console.log("||| 1 |||==");
 
-         let date = new Date();
+let date = new Date(2022, 8, 15); 
 
-         let months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+let day = date.getDay();
 
-         console.log(`Текущий месяц - ${months[date.getMonth()]}`)
+let days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+
+console.log(days[day]);
