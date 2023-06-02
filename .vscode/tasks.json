@@ -21,7 +21,7 @@
             "id": "branchname",
             "type": "promptString",
             "description": "Enter the name of the new branch",
-            "default": "omegagigajs_29"
+            "default": "omegagigajs_30"
         },
         {
             "id": "commitname",
