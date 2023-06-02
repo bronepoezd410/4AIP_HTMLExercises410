@@ -43,23 +43,25 @@
 
 
    <body>
+    <input type="text" id="input1" />
+     <input type="text" id="input2" />
+     <script>
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
 
-    <input id="elem" />
-    <p></p>
+        input1.addEventListener("keyup", function () {
+           if (this.value.length >= 2) {
+              input2.focus();
+           }
+        });
 
-    <script>
-
-       
-
-       let elem = document.querySelector("#elem");
-       let p = document.querySelector('p')
-
-       elem.addEventListener("input", function () {
-        p.textContent = this.value;
-       });
-
-    </script>
- </body>
+        input2.addEventListener("keyup", function () {
+           if (this.value.length >= 2) {
+              this.blur();
+           }
+        });
+     </script>
+  </body>
 
 
 
