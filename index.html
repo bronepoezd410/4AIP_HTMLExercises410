@@ -43,21 +43,26 @@
 
 
    <body>
+    <input type="radio" name="elem" value="1" checked>
+    <input type="radio" name="elem" value="2">
+    <input type="radio" name="elem" value="3">
+    <input type="submit" id="button">
+    <p></p>
 
-    <input id="elem" disabled />
-    <input id="button" type="submit" />
+     <script>
+        let radios = document.querySelectorAll('input[type="radio"]');
+        let button = document.querySelector("#button");
+        let p = document.querySelector("p");
 
-    <script>
-        
-       let elem = document.querySelector("#elem");
-       let button = document.querySelector("#button");
-
-       button.addEventListener("click", function () {
-          elem.disabled = !elem.disabled;
-       });
-       
-    </script>
- </body>
+        button.addEventListener("click", function () {
+           for (let radio of radios) {
+              if (radio.checked) {
+                 p.textContent = radio.value;
+              }
+           }
+        });
+     </script>
+  </body>
 
 
 
