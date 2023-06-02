@@ -37,33 +37,20 @@
 
 
 
-
    <body>
-    <input id="elem1" value="text1" />
-    <input id="elem2" value="text2" />
-    <input id="elem3" value="text3" />
-    <br />
-    <br />
-    <!-- 2 -->
-    <input id="elem" value="hello" />
+    <input id="elem" value="привет" />
     <script>
-       function func() {
-          console.log(this.value);
-       }
-       let elem1 = document.querySelector("#elem1");
-       let elem2 = document.querySelector("#elem2");
-       let elem3 = document.querySelector("#elem3");
-       func.call(elem1);
-       func.call(elem2);
-       func.call(elem3);
-       // 2
-       let elem = document.querySelector("#elem");
+       let elem = document.getElementById("elem");
 
-       function func(surname, name) {
+       function func(name, surname) {
           console.log(this.value + ", " + name + " " + surname);
        }
 
-       func.call(elem, "Smit", "John");
+       // привязываем контекст выполнения функции func к элементу elem
+       let funcBound = func.bind(elem);
+
+       funcBound("John", "Smit"); // выводит 'привет, John Smit'
+       funcBound("Eric", "Luis");
     </script>
  </body>
 
