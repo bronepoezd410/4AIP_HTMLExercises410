@@ -1,16 +1,20 @@
+          
+         let date = new Date();
 
-let date = new Date();
+         console.log("||| 1 |||==");
 
-console.log("||| 1 |||==");
+         function addZero(num) {
+            if (num >= 0 && num <= 9) {
+               return "0" + num;
+            } else {
+               return num;
+            }
+         }
 
-function addZero(num) {
-   if (num >= 0 && num <= 9) {
-      return "0" + num;
-   } else {
-      return num;
-   }
-}
+         let date1 = addZero(date.getDate()) +"-" + addZero(date.getMonth() + 1) +"-" + date.getFullYear();
 
-console.log(
- addZero(date.getHours()) + ':' + addZero(date.getMinutes()) + ':' + addZero(date.getSeconds()) + ' ' +
- addZero(date.getDate()) + '.' + addZero(date.getMonth() + 1) + '.' + date.getFullYear());
+         console.log(date1);
+
+         let date2 = date1.split("-").join(".");
+
+         console.log(date2);
