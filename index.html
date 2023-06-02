@@ -37,52 +37,24 @@
 
 
    <body>
-      <p>text1</p>
-      <p>text2</p>
-      <p>text3</p>
-      <br />
-      <br />
-      <!-- 2 -->
-      <table id="myTable">
-         <tr>
-            <td>Ячейка 1</td>
-            <td>Ячейка 2</td>
-            <td><a href="#">Ссылка</a></td>
-         </tr>
-         <tr>
-            <td>Ячейка 3</td>
-            <td>Ячейка 4</td>
-            <td><a href="#">Ссылка</a></td>
-         </tr>
-         <tr>
-            <td>Ячейка 5</td>
-            <td>Ячейка 6</td>
-            <td><a href="#">Ссылка</a></td>
-         </tr>
-      </table>
+      <p id="elem">text</p>
+      <input type="submit" id="toggle" value="show" />
 
       <script>
          window.onload = function () {
-            let pTags = document.getElementsByTagName("p");
-            for (let i = 0; i < pTags.length; i++) {
-               let link = document.createElement("a");
-               link.href = "#";
-               link.innerHTML = "Перечеркнуть";
-               link.addEventListener("click", function () {
-                  pTags[i].style.textDecoration = "line-through";
-                  this.style.textDecoration = "none";
-               });
-               pTags[i].appendChild(link);
-            }
-            // 2
-            const table = document.getElementById("myTable");
+            let elem = document.querySelector("#elem");
+            let toggle = document.querySelector("#toggle");
+            let isHidden = false;
 
-            table.addEventListener("click", function (event) {
-               const target = event.target;
-               if (target.tagName === "A") {
-                  const row = target.parentNode.parentNode;
-                  row.classList.add("green-bg");
+            toggle.addEventListener("click", function () {
+               if (isHidden) {
+                  elem.classList.remove("hidden");
+                  toggle.value = "hide";
+               } else {
+                  elem.classList.add("hidden");
+                  toggle.value = "show";
                }
+               isHidden = !isHidden;
             });
          };
       </script>
