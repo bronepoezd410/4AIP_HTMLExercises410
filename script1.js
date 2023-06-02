@@ -1,8 +1,16 @@
+console.log("||| 1 |||==");
 
-func(1, 2, 3, 4, 5);
+function func(...nums) {
+   let sum = 0;
+   let count = 0
 
-function func(a, b, ...rest) {
-   console.log(a);             // выведет 1
-   console.log(b);             // выведет 2
-   console.log(rest);          // выведет [3, 4, 5]
+   for (let num of nums) {
+      sum += num;
+      count++;
+   }
+
+   return sum / count;
 }
+
+let result = func(1, 2, 3, 4, 1, 1);
+console.log(result); 
