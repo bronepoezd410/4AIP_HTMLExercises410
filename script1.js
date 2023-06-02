@@ -1,70 +1,30 @@
 
 console.log('||| 1 |||==');
 
-function func1(localNum) {
-   console.log(localNum);
+function func1(num1) {
+   num1 = 2;
 }
 
-func1(1); // 1
-
+let num1 = 1;
+func1(num1);
+console.log(num1); // 1
 
 console.log('||| 2 |||==');
 
-function func2(localNum) {
-   console.log(localNum);
+function func2() {
+   num2 = 2;
 }
 
 let num2 = 1;
-func2(num2); // 1
-
+func2();
+console.log(num2); // 2
 
 console.log('||| 3 |||==');
 
-function func3(localNum) {
-   console.log(localNum);
+function func3() {
+   let num3 = 2;
 }
 
 let num3 = 1;
-func3(num3); // 1
-num3 = 2;
-
-console.log('||| 4 |||==');
-
-let num4 = 1;
-
-function func4(localNum) {
-   console.log(localNum);
-}
-
-num4 = 2;
-func4(num4); // 2
-
-console.log('||| 5 |||==');
-
-function func5(localNum) {
-   localNum = 2;
-}
-
-let num5 = 1;
-func5(num5);
-console.log(num5); // 1
-
-console.log('||| 6 |||==');
-
-function func6(localNum) {
-   num6 = 2;
-}
-
-let num6 = 1;
-func6(num6);
-console.log(num6); // 2
-
-console.log('||| 7 |||==');
-
-function func7(localNum) {
-   let num7 = 2;
-}
-
-let num7 = 1;
-func7(num7);
-console.log(num7); // 1
+func3();
+console.log(num3); // 1
