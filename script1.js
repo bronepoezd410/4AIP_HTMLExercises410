@@ -1,48 +1,30 @@
 
 console.log("||| 1 |||==");
 
-let arr1 = [1, 2, 3];
-let arr2 = [4, 5, 6];
-
-let arr = ["a", ...arr1, "b", "c", ...arr2];
+let arr = [..."12345"];
 console.log(arr);
 
-// ['a', 1, 2, 3, 'b', 'c', 4, 5, 6]
+// ['1', '2', '3', '4', '5']
 
 console.log("||| 2 |||==");
 
-let arr21 = [1, 2, 3];
-let arr22 = [4, 5, 6];
+let arr2 = ["a", ..."12345"];
+console.log(arr2);
 
-let arr23 = ["a", ...arr21, ...arr22, "b", "c"];
-console.log(arr23);
-
-// ["a", 1, 2, 3, 4, 5, 6, "b", "c"]
+// ["a", '1', '2', '3', '4', '5']
 
 console.log("||| 3 |||==");
 
-let arr31 = [1, 2, 3];
-let arr32 = [...arr31, 4, 5, 6];
+let arr3 = [..."12345", ..."56789"];
+console.log(arr3);
 
-let arr33 = ["a", "b", "c", ...arr32];
-console.log(arr33);
-
-// ["a", "b", "c", 1, 2, 3, 4, 5, 6]
+// ['1', '2', '3', '4', '5', '5', '6', '7', '8', '9']
 
 console.log("||| 4 |||==");
 
-let arr41 = [1, 2, 3];
-let arr42 = [...arr41, 4, 5, 6];
-let arr43 = [...arr42, 7, 8, 9];
+let arr41 = ["a", "b", "c"];
+let arr42 = [...arr41, ..."12345"];
 
-let arr44 = [0, ...arr43];
-console.log(arr44);
+console.log(arr42);
 
-// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-console.log("||| 5 |||==");
-
-let arr51 = [1, 2, 3];
-let arr52 = [...arr1];
-
-console.log(arr52);
+// ["a", "b", "c", '1', '2', '3', '4', '5']
