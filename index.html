@@ -37,18 +37,70 @@
 
 
    <body>
-      <div id="parent">
-         <p id="elem">text</p>
-         <a href="" id="remove">remove</a>
-      </div>
+      <ul id="myList">
+         <li>Item 1</li>
+         <li>Item 2</li>
+         <li>Item 3</li>
+      </ul>
+      <br />
+      <br />
+      <!-- 2 -->
+      <table id="myTable">
+         <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Action</th>
+         </tr>
+         <tr>
+            <td>John</td>
+            <td>30</td>
+            <td>1000</td>
+            <td><button class="delete-btn">Delete</button></td>
+         </tr>
+         <tr>
+            <td>Mary</td>
+            <td>25</td>
+            <td>1500</td>
+            <td><button class="delete-btn">Delete</button></td>
+         </tr>
+         <tr>
+            <td>Bob</td>
+            <td>35</td>
+            <td>2000</td>
+            <td><button class="delete-btn">Delete</button></td>
+         </tr>
+      </table>
       <script>
          window.onload = function () {
-            let elem = document.querySelector("#elem");
-            let remove = document.querySelector("#remove");
+            const list = document.getElementById("myList");
+            const items = list.getElementsByTagName("li");
 
-            remove.addEventListener("click", function (event) {
-               elem.remove();
-               event.preventDefault();
+            for (let i = 0; i < items.length; i++) {
+               const deleteLink = document.createElement("a");
+               deleteLink.href = "#";
+               deleteLink.innerHTML = "Удалить";
+
+               deleteLink.onclick = function () {
+                  list.removeChild(items[i]);
+                  return false;
+               };
+
+               items[i].appendChild(deleteLink);
+            }
+            // 2
+            let table = document.getElementById("myTable");
+            for (let i = 0; i < table.rows.length; i++) {
+               let deleteCell = table.rows[i].insertCell(-1);
+               deleteCell.innerHTML =
+                  '<button class="delete-btn">Delete</button>';
+            }
+
+            table.addEventListener("click", function (e) {
+               if (e.target.classList.contains("delete-btn")) {
+                  let row = e.target.closest("tr");
+                  row.parentNode.removeChild(row);
+               }
             });
          };
       </script>
