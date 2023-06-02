@@ -36,28 +36,33 @@
  
 
 
+   <body>
+ 
+    <ul>
+         <li class="list">1</li>
+         <li class="list">1</li>
+         <li class="list">1</li>
+    </ul>
+     <script>
 
-    <body>
-        <p>text1</p>
-        <p>text2</p>
-        <p>text3</p>
-  
-        <script>
-  
-           console.log("||| 1 |||==");
-  
-           let elems = document.querySelectorAll("p");
-  
-           for (let elem of elems) {
-              elem.addEventListener("click", func);
-           }
-  
-           function func() {
-              this.textContent += '!'
-              this.removeEventListener("click", func); 
-           }
-        </script>
-     </body>
+        let list = document.querySelectorAll(".list");
+
+        for (let elem of list) {
+           elem.addEventListener("click", func);
+        };
+
+        function func() {
+         if (Number(this.textContent) < 10) {
+              this.textContent = Number(this.textContent) + 1
+         } else {
+              this.removeEventListener('click', func);
+         }
+        
+         
+        }
+
+     </script>
+  </body>
 
 
 
