@@ -1,12 +1,13 @@
 console.log("||| 1 |||==");
 
-let options = {
-   width: 400,
-   height: 500,
+let obj = {
+   year: 2025,
+   month: 12,
+   day: 31,
 };
 
-let { color:c = 'red', width:w, height:h} = options;
+let year, month, day; // объявим переменные заранее
 
-console.log(c);
-console.log(w);
-console.log(h);
+// {year, month, day} = obj; // не будет работать
+
+({year, month, day} = obj);
