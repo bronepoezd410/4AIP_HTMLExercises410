@@ -19,7 +19,35 @@
 
 
 
+   <body>
+      <div id="div1">10</div>
+      <div id="div2">10</div>
+      <script>
+         (function () {
+            let elem = document.querySelector("#div1"); 
 
+            function func(num) {
+               return num * num; 
+            }
+
+            elem.addEventListener("click", function () {
+               this.textContent = func(elem.textContent);
+            });
+         })();
+
+         (function () {
+            let elem = document.querySelector("#div2"); 
+
+            function func(num) {
+               return num * num * num; 
+            }
+
+            elem.addEventListener("click", function () {
+               this.textContent = func(elem.textContent);
+            });
+         })();
+      </script>
+   </body>
 
 
 
