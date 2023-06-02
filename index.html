@@ -37,64 +37,61 @@
 
 
 
-   <body>
-     
-    <p id="elem1" class="www ggg zzz"></p>
-    <p id="elem2" class="www ggg zzz"></p>
-    <p id="elem3" class="www ggg zzz"></p>
-    <p id="elem4" class="www ggg zzz"></p>
-    <p id="elem5" class="www ggg zzz"></p>
-    <p id="elem6"></p>
 
-    <script>
-       console.log("||| 1 |||==");
+   <style>
 
-       let elem1 = document.querySelector("#elem1");
-       let length = elem1.classList.length;
+    .wrapper {
+         margin: 50px 0 0 50px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         
+    }
 
-       console.log(length);
+    #block {
+         width: 200px;
+         height: 200px;
+         background-color: #000;
+         margin-bottom: 20px;
+         color: #fff;
+         padding-top: 30px;
+         box-sizing: border-box;  
+    }
 
-       console.log("||| 2 |||==");
+  </style>
 
-       let elem2 = document.querySelector("#elem2");
-       let class1 = elem2.classList;
+  <body>
+    <div class="wrapper">
+         <div id="block">Hello world!</div>
+         <button id="btn">button</button>
+    </div>
 
-       for (let classItem of class1) {
-        console.log(classItem)
-       }
- 
-       console.log("||| 3 |||==");
 
-       let elem3 = document.querySelector("#elem3");
-       elem3.classList.add('xxx');
-       let class2 = elem3.classList;
+     <script>
+        console.log("||| 1 |||==");
 
-       console.log(class2)
+        let btn = document.querySelector('#btn');
+        let block = document.querySelector('#block');
 
-       console.log("||| 4 |||==");
+        btn. addEventListener('click', () => {
+         block.style.fontSize = '20px';
+         block.style.cssFloat = 'left';
+        })
+        
 
-       let elem4 = document.querySelector("#elem4");
-       elem4.classList.remove('www', 'zzz');
-       let class3 = elem4.classList;
+   
 
-        console.log(class3)
+        console.log("||| 2 |||==");
 
-       console.log("||| 5 |||==");
+   
 
-       let elem5 = document.querySelector("#elem5");
-       let contains = elem5.classList.contains('ggg');
-        console.log(contains);
+  
+        console.log("||| 3 |||==");
 
-       console.log("||| 6 |||==");
+      
 
-       let elem6 = document.querySelector("#elem6");
-       elem6.classList.toggle('zzz');
-       let class4 = elem6.classList;
-
-        console.log(class4)
-
-    </script>
- </body>
+     </script>
+  </body>
 
 
 
