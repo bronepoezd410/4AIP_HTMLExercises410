@@ -38,61 +38,40 @@
 
 
 
-   <style>
 
+   <style>
     .wrapper {
-         margin: 50px 0 0 50px;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         
+       margin: 50px 0 0 50px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
     }
 
     #block {
-         width: 200px;
-         height: 200px;
-         background-color: #000;
-         margin-bottom: 20px;
-         color: #fff;
-         padding-top: 30px;
-         box-sizing: border-box;  
+       width: 200px;
+       height: 200px;
+       background-color: #000;
+       margin-bottom: 20px;
+       color: #fff;
+       padding-top: 30px;
+       box-sizing: border-box;
     }
+ </style>
+ <body>
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
 
-  </style>
+    <script>
+       let elems = document.querySelectorAll("p");
 
-  <body>
-    <div class="wrapper">
-         <div id="block">Hello world!</div>
-         <button id="btn">button</button>
-    </div>
-
-
-     <script>
-        console.log("||| 1 |||==");
-
-        let btn = document.querySelector('#btn');
-        let block = document.querySelector('#block');
-
-        btn. addEventListener('click', () => {
-         block.style.fontSize = '20px';
-         block.style.cssFloat = 'left';
-        })
-        
-
-   
-
-        console.log("||| 2 |||==");
-
-   
-
-  
-        console.log("||| 3 |||==");
-
-      
-
-     </script>
-  </body>
-
+       for (let elem of elems) {
+          elem.addEventListener("click", function () {
+             this.classList.add("colored");
+          });
+       }
+    </script>
+ </body>
 
 
 
