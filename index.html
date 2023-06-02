@@ -38,11 +38,17 @@
 
 
    <body>
-    <input id="elem" value="привет" />
+    <h1>hello world</h1>
     <script>
-       setInterval(function () {
-          console.log("hello");
-       }, 3000);
+       let number = 100;
+       let timerId = setInterval(() => {
+          console.log(number);
+          number--;
+
+          if (number === 0) {
+             clearInterval(timerId);
+          }
+       }, 1000);
     </script>
  </body>
 
