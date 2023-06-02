@@ -2,7 +2,8 @@ console.log("||| 1 |||==");
 
 let arr = ["John", "Smit", "development", "programmer", 2000];
 
-let [, , department, position, ] = arr;
+let [name, surname, ...info] = arr;
 
-console.log(department)
-console.log(position)
+console.log(name)
+console.log(surname)
+console.log(info)
