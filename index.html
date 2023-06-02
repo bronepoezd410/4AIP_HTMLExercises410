@@ -39,20 +39,24 @@
 
 
 
-
    <body>
-
-    <div id="elem">0 : 0</div>
+    <button id="elem">text</button>
 
     <script>
+       let elem = document.querySelector("#elem");
 
-       let elem = document.getElementById("elem");
+       elem.addEventListener("click", func);
+       elem.addEventListener("dblclick", func);
 
-       document.addEventListener("mousemove", function (event) {
-          elem.innerHTML = event.clientX + " : " + event.clientY;
-       });
-       
+       function func(event) {
+          if (event.type === "click") {
+             event.target.style.backgroundColor = "green";
+          } else if (event.type === "dblclick") {
+             event.target.style.backgroundColor = "red";
+          }
+       }
     </script>
+ </body>
 
 
 
