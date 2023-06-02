@@ -39,39 +39,25 @@
 
 
 
-   <style>
-    .wrapper {
-       margin: 50px 0 0 50px;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-    }
+   <body>
 
-    #block {
-       width: 200px;
-       height: 200px;
-       background-color: #000;
-       margin-bottom: 20px;
-       color: #fff;
-       padding-top: 30px;
-       box-sizing: border-box;
-    }
- </style>
- <body>
-    <p>text1</p>
-    <p>text2</p>
-    <p>text3</p>
+    <ul id="elem">
+         <li>text1</li>
+         <li>text</li>
+         <li>text</li>
+         <li>text</li>
+         <li>text</li>
+    </ul>
 
-    <script>
-       let elems = document.querySelectorAll("p");
+     <script>
 
-       for (let elem of elems) {
-          elem.addEventListener("click", function () {
-             this.classList.add("colored");
-          });
-       }
-    </script>
- </body>
+         let parent = document.querySelector('#elem');
+         let text = parent.firstElementChild.innerHTML;
+
+         console.log(text);
+
+     </script>
+  </body>
 
 
 
